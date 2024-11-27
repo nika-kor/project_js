@@ -2,6 +2,8 @@ const gameArea = {
     // створити елемент canvas
     canvas: document.createElement('canvas'),
 
+    bgPosition: 0,
+
     // функція, що запускає гру
     start: function () {
         // задати розміри canvas
@@ -22,14 +24,13 @@ const gameArea = {
 
         // код для відслідковування натисків клавіш
         window.addEventListener('keydown', (e) => {
-            gameArea.keys = (gameArea.keys || []);
-            gameArea.keys[e.keyCode] = true;
+            // стрибок, якщо пробіл
+            if (e.key == " ") {
+                dino.jump();
+            }
         })
 
-        window.addEventListener('keyup', (e) => {
-            gameArea.keys = (gameArea.keys || []);
-            gameArea.keys[e.keyCode] = false;
-        })
+        dino.image.src = './img/dino-run-1.png';
     },
 
     // функція для стирання екрану
@@ -37,28 +38,61 @@ const gameArea = {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
 }
-// функція для оновлення гри
-const updateGameArea = function () {
-    gameArea.clear();
-    // gameArea.ctx.fillRect(Math.random() * gameArea.canvas.width, Math.random() * gameArea.canvas.height, 30, 30);
-    gameArea
-}
 
 const dino = {
-    image: new Image(src='./img/dino-run-1.png'),
+    // створення картинки для динозаврика
+    image: new Image(),
+
+    // розміри динозаврика
+    height: 45,
+    width: 45 * 0.93,
+
+    // система координат та прискорення: точка відліку, позиція, швидкість 
     originY: 100,
-    posY: 0,
+    posY: 100,
     spdY: 0,
-    move: function () {
-        this.posY += this.spdY;
-        if (!(this.posY == this.originY)) {
-            
+    posX: 100,
+
+    // для стрибання: умова, чи знаходиться динозаврик у повітрі, та сила гравітації
+    isJumping: false,
+    gravity: 0.5,
+
+    // функція оновлення стану, виконується кожного оновлення гри
+    update: function () {
+        if (this.isJumping) {
+            // прискорення вниз через гравітацію та зміна позиції через прискорення
+            this.spdY += this.gravity;
+            this.posY += this.spdY;
+
+            // перевірка, чи не впав динозаврик на землю
+            if (this.posY >= this.originY) {
+                this.posY = this.originY;
+                this.isJumping = false;
+                this.spdY = 0;
+            }
         }
     },
 
+    // функція стрибка
     jump: function () {
-        this.spdY = 10;
+        // якщо не знаходиться у стані стрибка, перейти у стан стрибка і задати прискорення вгору
+        if (!this.isJumping) {
+            this.isJumping = true;
+            this.spdY = -10;
+        }
     }
+}
+
+// функція для оновлення гри
+function updateGameArea () {
+    // оновити стан динозаврика
+    dino.update();
+
+    // стерти все з екрану
+    gameArea.clear();
+
+    // відмалювати динозаврика
+    gameArea.ctx.drawImage(dino.image, dino.posX, dino.posY, dino.width, dino.height);
 }
 
 // запустити гру
