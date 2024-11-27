@@ -14,7 +14,7 @@ const gameArea = {
         this.canvas.style.backgroundColor = 'fuchsia';
 
         // додати canvas до <body>
-        document.body.appendChild(this.canvas);
+        document.querySelector(".dino").appendChild(this.canvas);
 
         // отримати контекст рендерінгу
         this.ctx = this.canvas.getContext('2d');
@@ -24,6 +24,8 @@ const gameArea = {
 
         // код для відслідковування натисків клавіш
         window.addEventListener('keydown', (e) => {
+            e.preventDefault();
+            
             // стрибок, якщо пробіл
             if (e.key == " ") {
                 dino.jump();
