@@ -1,6 +1,25 @@
-const theme = 'light'; 
+const theme = 'light';
+
+function executeWithRandomIntervals(task, minInterval, maxInterval) {
+    if (gameArea.running) {
+        function next() {
+            const randomDelay = Math.floor(
+                Math.random() * (maxInterval - minInterval + 1) + minInterval
+            );
+
+            setTimeout(() => {task(); next();}, randomDelay);
+        }
+
+        next();
+    } else {
+        return;
+    }
+}
 
 const gameArea = {
+    //
+    running: false,
+
     // створити елемент canvas
     canvas: document.createElement('canvas'),
 
@@ -12,8 +31,22 @@ const gameArea = {
     speed: 2,
     score: 0,
 
+    doOnce: function () {
+        this.running = true;
+        this.createCactuses = executeWithRandomIntervals(createCactus, 500, 3000);
+        this.running = false;
+    },
+
     // функція, що ініціалізує гру
     init: function () {
+        //
+        this.bgPosition = 0;
+        this.speed = 2;
+        this.score = 0;
+        dino.isAlive = true;
+        this.cactuses = [];
+        this.cactusId = 0;
+
         this.bgImage.src = './img/ground.png';
         dino.image.src = './img/dino-idle.png';
 
@@ -49,17 +82,61 @@ const gameArea = {
         this.intervalUpdate = setInterval(updateGameArea, 20);
         this.intervalSpeed = setInterval(updateGameSpeed, 1500);
         this.intervalScore = setInterval(updateScore, 200);
+        this.running = true;
+    },
+
+    stop: function () {
+        //
+        clearInterval(this.intervalUpdate);
+        clearInterval(this.intervalSpeed);
+        clearInterval(this.intervalScore);
+        this.running = false;
     },
 
     // функція для стирання екрану
     clear: function () {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    },
+
+    cactuses: []
+}
+
+class Cactus {
+    constructor () {
+        this.active = true;
+        this.image = new Image();
+        this.srcSet = [
+            './img/cactus-1.png', './img/cactus-2.png', './img/cactus-3.png', 
+            './img/cactus-4.png', './img/cactus-5.png', './img/cactus-6.png', 
+            './img/cactus-7.png', './img/cactus-8.png', './img/cactus-9.png'
+        ];
+        this.srcId = Math.floor(Math.random() * this.srcSet.length);
+        this.image.src = this.srcSet[this.srcId];
+        this.width = [34, 34, 34, 34, 50, 48, 50, 60, 50][this.srcId] / 1.5;
+        this.height = [70, 70, 70, 70, 100, 100, 100, 96, 100][this.srcId] / 1.5;
+        this.posX = gameArea.canvas.width + this.width;
+        this.posY = [185, 185, 185, 185, 170, 170, 170, 170, 170][this.srcId];
+        this.update = function () {
+            this.posX -= gameArea.speed * 3;
+
+            if (this.posX < (-gameArea.canvas.width - this.width)) {
+                this.active = false;
+            }
+        }
     }
+}
+
+function createCactus () {
+    gameArea.cactuses.push(new Cactus(gameArea.cactusId));
+    gameArea.cactusId++;
 }
 
 const dino = {
     // створення картинки для динозаврика
     image: new Image(),
+
+    //
+    isAlive: true,
 
     // анімація бігу як список картинок
     animationRun: ['./img/dino-run-1.png', './img/dino-run-2.png'],
@@ -81,25 +158,27 @@ const dino = {
 
     // функція оновлення стану, виконується кожного оновлення гри
     update: function () {
-        if (this.isJumping) {
-            // при стрибку задати картинку стрибка
-            this.image.src = './img/dino-idle.png';
+        if (this.isAlive) {
+            if (this.isJumping) {
+                // при стрибку задати картинку стрибка
+                this.image.src = './img/dino-idle.png';
 
-            // прискорення вниз через гравітацію та зміна позиції через прискорення
-            this.spdY += this.gravity;
-            this.posY += this.spdY;
+                // прискорення вниз через гравітацію та зміна позиції через прискорення
+                this.spdY += this.gravity;
+                this.posY += this.spdY;
 
-            // перевірка, чи не впав динозаврик на землю
-            if (this.posY >= this.originY) {
-                this.posY = this.originY;
-                this.isJumping = false;
-                this.spdY = 0;
-            }
-        } else {
-            // анімація
-            this.animationFrame += 1;
-            if (this.animationFrame % 5 == 0) {
-                this.image.src = this.animationRun[this.animationFrame % this.animationRun.length];
+                // перевірка, чи не впав динозаврик на землю
+                if (this.posY >= this.originY) {
+                    this.posY = this.originY;
+                    this.isJumping = false;
+                    this.spdY = 0;
+                }
+            } else {
+                // анімація
+                this.animationFrame += 1;
+                if (this.animationFrame % 5 == 0) {
+                    this.image.src = this.animationRun[this.animationFrame % this.animationRun.length];
+                }
             }
         }
     },
@@ -111,6 +190,14 @@ const dino = {
             this.isJumping = true;
             this.spdY = -10;
         }
+    },
+
+    //
+    die: function () {
+        // 
+        this.isAlive = false;
+        gameArea.stop();
+        this.image.src = './img/dino-dead.png';
     }
 }
 
@@ -146,7 +233,7 @@ function updateGameArea () {
             break;
         case 'light':
             gameArea.ctx.fillStyle = '#121212';
-            gameArea.ctx.style.backgroundColor = 'white';
+            gameArea.canvas.style.backgroundColor = 'white';
             break;
     }
     gameArea.ctx.fillText(Math.floor(gameArea.score), gameArea.canvas.width - String(Math.floor(gameArea.score)).length * 8 - 8, 24);
@@ -160,12 +247,35 @@ function updateGameArea () {
     gameArea.ctx.drawImage(gameArea.bgImage, gameArea.bgPosition, 120, gameArea.bgImage.width, gameArea.canvas.height / 2);
     gameArea.ctx.drawImage(gameArea.bgImage, gameArea.bgPosition + gameArea.bgImage.width, 120, gameArea.bgImage.width, gameArea.canvas.height / 2);
 
+    for (let c of gameArea.cactuses) {
+        if (c.active) {
+            c.update();
+            gameArea.ctx.drawImage(c.image, c.posX, c.posY, c.width, c.height);
+            if (
+                dino.posX + dino.width > c.posX &&
+                dino.posX + dino.width < c.posX + c.width &&
+                dino.posY + dino.height > c.posY &&
+                dino.posY + dino.height < c.posY + c.height
+            ) {
+                dino.die();
+                gameArea.speed = 0;
+                setTimeout(() => {updateGameArea()}, 10)
+            }
+        }
+    }
+
     // відмалювати динозаврика
     gameArea.ctx.drawImage(dino.image, dino.posX, dino.posY, dino.width, dino.height);
 }
 
 // ініціалізувати гру
+gameArea.doOnce();
 gameArea.init();
 
 // запустити гру при натиску на ігрове поле
-gameArea.canvas.addEventListener('click', () => {gameArea.start()})
+gameArea.canvas.addEventListener('click', () => {
+    if (!gameArea.running) {
+        gameArea.init();
+        gameArea.start();
+    }
+})
