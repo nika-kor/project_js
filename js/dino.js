@@ -1,5 +1,8 @@
+// тут буде тема, задана перемикачем
 const theme = 'light';
 
+
+// функція для виконання функції з рандомними інтервалами 
 function executeWithRandomIntervals(task, minInterval, maxInterval) {
     if (gameArea.running) {
         function next() {
@@ -16,8 +19,9 @@ function executeWithRandomIntervals(task, minInterval, maxInterval) {
     }
 }
 
+// об'єкт ігрового поля
 const gameArea = {
-    //
+    // умова стану гри
     running: false,
 
     // створити елемент canvas
@@ -31,6 +35,7 @@ const gameArea = {
     speed: 2,
     score: 0,
 
+    // функція, що виконується один раз, при завантаження сторінки
     doOnce: function () {
         this.running = true;
         this.createCactuses = executeWithRandomIntervals(createCactus, 500, 3000);
@@ -39,7 +44,7 @@ const gameArea = {
 
     // функція, що ініціалізує гру
     init: function () {
-        //
+        // скидання змінних
         this.bgPosition = 0;
         this.speed = 2;
         this.score = 0;
@@ -47,6 +52,7 @@ const gameArea = {
         this.cactuses = [];
         this.cactusId = 0;
 
+        // завантаження картинок
         this.bgImage.src = './img/ground.png';
         dino.image.src = './img/dino-idle.png';
 
@@ -86,7 +92,7 @@ const gameArea = {
     },
 
     stop: function () {
-        //
+        // зупинити гру
         clearInterval(this.intervalUpdate);
         clearInterval(this.intervalSpeed);
         clearInterval(this.intervalScore);
@@ -98,13 +104,16 @@ const gameArea = {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     },
 
+    // масив для зберігання кактусів
     cactuses: []
 }
 
+// клас кактуса
 class Cactus {
     constructor () {
         this.active = true;
         this.image = new Image();
+        // отримати рандомне посилання на картинку та відповідні дані про висоту, ширину, позицію по y
         this.srcSet = [
             './img/cactus-1.png', './img/cactus-2.png', './img/cactus-3.png', 
             './img/cactus-4.png', './img/cactus-5.png', './img/cactus-6.png', 
@@ -114,11 +123,16 @@ class Cactus {
         this.image.src = this.srcSet[this.srcId];
         this.width = [34, 34, 34, 34, 50, 48, 50, 60, 50][this.srcId] / 1.5;
         this.height = [70, 70, 70, 70, 100, 100, 100, 96, 100][this.srcId] / 1.5;
-        this.posX = gameArea.canvas.width + this.width;
         this.posY = [185, 185, 185, 185, 170, 170, 170, 170, 170][this.srcId];
+
+        // починати з-за екрану
+        this.posX = gameArea.canvas.width + this.width;
+
+        // оновлення кактусу
         this.update = function () {
             this.posX -= gameArea.speed * 3;
 
+            // зупинити дію та оновленняя кактусу після виходу за екран для економіЇ ресурсів
             if (this.posX < (-gameArea.canvas.width - this.width)) {
                 this.active = false;
             }
@@ -126,16 +140,17 @@ class Cactus {
     }
 }
 
+// функція для ствоорення кактуса
 function createCactus () {
-    gameArea.cactuses.push(new Cactus(gameArea.cactusId));
-    gameArea.cactusId++;
+    gameArea.cactuses.push(new Cactus());
 }
 
+// об'єкт динозаврика
 const dino = {
     // створення картинки для динозаврика
     image: new Image(),
 
-    //
+    // умова, чи живий
     isAlive: true,
 
     // анімація бігу як список картинок
@@ -192,25 +207,29 @@ const dino = {
         }
     },
 
-    //
+    // функція смерті
     die: function () {
-        // 
+        // скидання умови про життєдіяльність, зупинка гри, зміна картинки на мертвого динозаврика
         this.isAlive = false;
         gameArea.stop();
         this.image.src = './img/dino-dead.png';
     }
 }
 
+// кнопка рестарту
+let gameOver = new Image();
+gameOver.src = './img/game-over.png'
+
 // функція оновлення рахунку
 function updateScore () {
     gameArea.score += (gameArea.speed / 2);
 }
 
-
 // функція оновлення швидкості
 function updateGameSpeed () {
-    if (gameArea.speed < 4)
-    gameArea.speed += 0.02;
+    if (gameArea.speed < 4) {
+        gameArea.speed += 0.02;
+    }
 }
 
 // функція для оновлення гри
@@ -226,6 +245,7 @@ function updateGameArea () {
 
     // вивести рахунок на екран
     gameArea.ctx.font = '16px serif';
+    // залежно від теми задати кольори фону та тексту
     switch(theme) {
         case 'dark':
             gameArea.ctx.fillStyle = 'white';
@@ -247,19 +267,29 @@ function updateGameArea () {
     gameArea.ctx.drawImage(gameArea.bgImage, gameArea.bgPosition, 120, gameArea.bgImage.width, gameArea.canvas.height / 2);
     gameArea.ctx.drawImage(gameArea.bgImage, gameArea.bgPosition + gameArea.bgImage.width, 120, gameArea.bgImage.width, gameArea.canvas.height / 2);
 
+    // оновлення і відмальовка всіх кактусів
     for (let c of gameArea.cactuses) {
         if (c.active) {
             c.update();
             gameArea.ctx.drawImage(c.image, c.posX, c.posY, c.width, c.height);
+
+            // перевірка на колізію з динозавриком (виглядає страшно, але насправді все просто)
             if (
                 dino.posX + dino.width > c.posX &&
                 dino.posX + dino.width < c.posX + c.width &&
                 dino.posY + dino.height > c.posY &&
                 dino.posY + dino.height < c.posY + c.height
             ) {
+                // вбити динозаврика
                 dino.die();
+
+                // скинути швидкість гри
                 gameArea.speed = 0;
-                setTimeout(() => {updateGameArea()}, 10)
+
+                // оновити поле один раз і намалювати кнопку рестарта через 1 мілісекунду
+                setTimeout(() => {
+                    updateGameArea(); gameArea.ctx.drawImage(gameOver, (gameArea.canvas.width / 2) - 25, (gameArea.canvas.height / 2) - 25, 50, 50);
+                }, 1);
             }
         }
     }
@@ -271,8 +301,9 @@ function updateGameArea () {
 // ініціалізувати гру
 gameArea.doOnce();
 gameArea.init();
+setTimeout(() => {gameArea.ctx.drawImage(gameOver, (gameArea.canvas.width / 2) - 25, (gameArea.canvas.height / 2) - 25, 50, 50);}, 10);
 
-// запустити гру при натиску на ігрове поле
+// запустити гру при натиску на ігрове поле, якщо вона вже не запущена
 gameArea.canvas.addEventListener('click', () => {
     if (!gameArea.running) {
         gameArea.init();
