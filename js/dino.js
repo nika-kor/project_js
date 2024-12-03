@@ -70,11 +70,10 @@ const gameArea = {
         this.ctx = this.canvas.getContext('2d');
 
         // відслідковування натисків клавіш
-        window.addEventListener('keydown', (e) => {
-            e.preventDefault();
-            
+        window.addEventListener('keydown', (e) => {            
             // стрибок, якщо пробіл
             if (e.key == " ") {
+                e.preventDefault();
                 dino.jump();
             }
         });
