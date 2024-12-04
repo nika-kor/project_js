@@ -1,0 +1,25 @@
+.football {
+    padding: 36px 0;
+
+    &-container {
+        @include flex(_, center, 36px, _, column);
+    }
+
+    &-title {
+        @include typography(inherit, 16px, 400, 19.5px, center);
+    }
+
+    &-field {
+        width: 720px;
+        height: 220px;
+        border: 2px solid $black;
+        border-radius: 37px;
+        background-color: #5ABB58;
+    }
+
+    &-ball {
+        width: 50px;
+        height: 50px;
+        transition: 300ms;
+    }
+}

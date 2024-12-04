@@ -1,4 +1,4 @@
-/* 
+/*
 <h2 class="birth-year-check-title">Перевір в який рік ти народився</h2>
 <div class="birth-year-check-bottom-wrapper">
     <div class="birth-year-check-input-wrapper">
@@ -6,7 +6,7 @@
         <button class="birth-year-check-btn"><svg width="15" height="15" class="birth-year-check-btn-svg"><use href="./symbol-defs.svg#icon-search"></use></svg></button>
     </div>
     <p class="birth-year-check-text">Ви народилися у високосний рік!</p>
-</div> 
+</div>
 */  
 
 const yearCheckTitle = document.createElement('h2');

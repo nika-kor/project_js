@@ -143,4 +143,35 @@ body {
   font-weight: 400;
   line-height: 19.5px;
   text-align: center;
+}
+
+.football {
+  padding: 36px 0;
+}
+.football-container {
+  display: flex;
+  justify-content: _;
+  align-items: center;
+  gap: 36px;
+  flex-wrap: _;
+  flex-direction: column;
+}
+.football-title {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.5px;
+  text-align: center;
+}
+.football-field {
+  width: 720px;
+  height: 220px;
+  border: 2px solid #000000;
+  border-radius: 37px;
+  background-color: #5ABB58;
+}
+.football-ball {
+  width: 50px;
+  height: 50px;
+  transition: 300ms;
 }/*# sourceMappingURL=main.css.map */
