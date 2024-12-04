@@ -1,3 +1,9 @@
+const dinoTitle = document.createElement('h2');
+dinoTitle.classList.add('dino-title');
+dinoTitle.textContent = 'Google динозавр';
+const dinoContainer = document.querySelector('.dino-container');
+dinoContainer.appendChild(dinoTitle);
+
 // тут буде тема, задана перемикачем
 const theme = 'light';
 
@@ -64,17 +70,19 @@ const gameArea = {
         // this.canvas.style.backgroundColor = 'fuchsia';
 
         // додати canvas до <body>
-        document.querySelector(".dino").appendChild(this.canvas);
+        document.querySelector(".dino>.container").appendChild(this.canvas);
 
         // отримати контекст рендерінгу
         this.ctx = this.canvas.getContext('2d');
 
         // відслідковування натисків клавіш
-        window.addEventListener('keydown', (e) => {            
-            // стрибок, якщо пробіл
-            if (e.key == " ") {
-                e.preventDefault();
-                dino.jump();
+        window.addEventListener('keydown', (e) => {
+            if (gameArea.running) {     
+                // стрибок, якщо пробіл
+                if (e.key == " ") {
+                    e.preventDefault();
+                    dino.jump();
+                }
             }
         });
         

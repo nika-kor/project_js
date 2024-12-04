@@ -1,0 +1,55 @@
+.birth-year-check {
+    padding-top: 36px;
+    padding-bottom: 36px;
+
+    &-container {
+        @include flex(_, center, 36px, _, column);
+    }
+
+    &-title {
+        @include typography(inherit, 16px, 400, 19.5px, center);
+    }
+
+    &-bottom-wrapper {
+        @include flex(center, center, 202px, _, _);
+    }
+
+    &-input-wrapper {
+        @include flex(center, center, _, _, _);
+        box-shadow: 3px 3px 0px 0px #00000040;
+        border-radius: 20px;
+    }
+
+    &-input {
+        border-radius: 20px 0 0 20px;
+        height: 35px;
+        width: 180px;
+        padding: 10px;
+        @include typography(inherit, 12px, 400, 14.63px, left);
+        background-color: $input-grey;
+        color: $dgrey;
+    }
+
+    &-btn {
+        border-radius: 0 20px 20px 0;
+        height: 35px;
+        width: 35px;
+        background-color: $black;
+        @include flex(center, center, _, _, _);
+
+        &-svg {
+            fill: none;
+            stroke: $white;
+        }
+    }
+
+    &-text {
+        width: 230px;
+        @include typography(inherit, 12px, 400, 14.63px, right);
+        color: $text-right;
+
+        &.output-text-wrong {
+            color: $text-wrong;
+        }
+    }
+}
