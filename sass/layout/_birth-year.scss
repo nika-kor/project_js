@@ -8,6 +8,7 @@
 
     &-title {
         @include typography(inherit, 16px, 400, 19.5px, center);
+        color: $black;
     }
 
     &-bottom-wrapper {
@@ -38,8 +39,7 @@
         @include flex(center, center, _, _, _);
 
         &-svg {
-            fill: none;
-            stroke: $white;
+            fill: $white;
         }
     }
 

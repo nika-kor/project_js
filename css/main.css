@@ -43,7 +43,176 @@ body {
 .container {
   width: 1090px;
   margin: 0 auto;
+}
+
+body {
   background-color: #ffffff;
+  color: #000000;
+}
+body h2 {
+  color: #000000;
+}
+body .header-nav-list-svg {
+  stroke: #000000;
+}
+body.dark {
+  background-color: #222222;
+  color: #ffffff;
+}
+body.dark h2 {
+  color: #ffffff;
+}
+body.dark button:has(svg) {
+  background-color: #ffffff;
+}
+body.dark button:has(svg) svg {
+  fill: #000000;
+}
+body.dark .logo-svg {
+  fill: #ffffff;
+}
+body.dark .logo-text-wrapper {
+  color: #ffffff;
+}
+body.dark .header-nav-list-svg {
+  stroke: #ffffff;
+}
+
+.header {
+  padding: 21px 0;
+}
+.header-container {
+  width: 1090px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: _;
+  flex-wrap: _;
+  flex-direction: _;
+}
+.header .logo {
+  margin-right: 81px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  text-align: right;
+  color: #000000;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: _;
+  flex-wrap: _;
+  flex-direction: _;
+}
+.header .logo-svg {
+  fill: #000000;
+}
+.header .logo-text-wrapper {
+  margin-left: 9px;
+  width: 44px;
+  height: 35px;
+}
+.header .logo-text-stylized {
+  font-family: Sacramento;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17.51px;
+  text-align: right;
+}
+.header-nav {
+  margin-right: 361px;
+}
+.header-nav-list {
+  width: 370px;
+  display: flex;
+  justify-content: _;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: _;
+  flex-direction: _;
+}
+.header-nav-list-item {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  text-align: left;
+}
+.header-nav-list-item:first-child {
+  display: flex;
+  justify-content: _;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: _;
+  flex-direction: _;
+}
+.header-settings-list {
+  display: flex;
+  justify-content: _;
+  align-items: center;
+  gap: 51px;
+  flex-wrap: _;
+  flex-direction: _;
+}
+.header-settings-list-text {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  text-align: right;
+}
+.header-settings-list-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+.header-settings-list-switch-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.header-settings-list-switch-checkbox:checked + span {
+  background-color: #cccccc;
+}
+.header-settings-list-switch-checkbox:checked + span::before {
+  transform: translateX(20px);
+}
+.header-settings-list-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #7a7a7a;
+  transition: 400ms;
+  border-radius: 10px;
+}
+.header-settings-list-switch-slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 0;
+  top: 0px;
+  background-color: white;
+  transition: 400ms;
+  border-radius: 50%;
+  background-image: url("../img/header-slider.png");
+  background-position: 0;
+}
+
+.hero {
+  padding: 36px 0;
+}
+.hero-title {
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29.26px;
+  text-align: center;
 }
 
 .birth-year-check {
@@ -64,6 +233,7 @@ body {
   font-weight: 400;
   line-height: 19.5px;
   text-align: center;
+  color: #000000;
 }
 .birth-year-check-bottom-wrapper {
   display: flex;
@@ -109,8 +279,7 @@ body {
   flex-direction: _;
 }
 .birth-year-check-btn-svg {
-  fill: none;
-  stroke: #ffffff;
+  fill: #ffffff;
 }
 .birth-year-check-text {
   width: 230px;

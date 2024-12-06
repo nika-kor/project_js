@@ -4,8 +4,8 @@ dinoTitle.textContent = 'Google динозавр';
 const dinoContainer = document.querySelector('.dino-container');
 dinoContainer.appendChild(dinoTitle);
 
-// тут буде тема, задана перемикачем
-const theme = 'light';
+// тема, задана перемикачем
+let theme = document.body.classList.contains('dark') ? 'dark' : 'light';
 
 
 // функція для виконання функції з рандомними інтервалами 
@@ -241,6 +241,9 @@ function updateGameSpeed () {
 
 // функція для оновлення гри
 function updateGameArea () {
+    // оновити тему
+    theme = document.body.classList.contains('dark') ? 'dark' : 'light';
+
     // оновити стан динозаврика
     dino.update();
 

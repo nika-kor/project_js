@@ -4,37 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"> -->
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
     <!-- header -->
     <header class="header">
-        <div class="container">
-            <a href=""class="logo">
-                <svg width="40" height="38.15">
-                    <use href=""></use>
+        <div class="container header-container">
+            <a href="" class="logo">
+                <svg width="40" height="38.15" class="logo-svg">
+                    <use href="./symbol-defs.svg#icon-logo"></use>
                 </svg>
-                Coding Magic
-            </a> 
-            <nav class="nav-list">
-                <li class="nav-list-item">Інтерактив</li>
-                <li class="nav-list-item">Наша команда</li>
-                <li class="nav-list-item">Контакти</li>
+                <div class="logo-text-wrapper">
+                    Coding <span class="logo-text-stylized">Magic</span>
+                </div>
+            </a>
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-list-item">Інтерактив<svg width="9" height="5" class="header-nav-list-svg"><use href="./symbol-defs.svg#icon-arrow-down"></use></svg></li>
+                    <li class="header-nav-list-item">Наша команда</li>
+                    <li class="header-nav-list-item">Контакти</li>
+                </ul>
             </nav>
-            <ul class="settings-list">
-                <li class="settings-list-item">
-                    <div class="settings-list-switch">
-                        <input type="checkbox"  class="settings-list-switch-input">
-                        <label class="settings-list-switch-label">
-                          <span class="settings-list-switch-span"></span>
-                        </label>
-                    </div> 
+            <ul class="header-settings-list">
+                <li class="header-settings-list-item">
+                    <label class="header-settings-list-switch">
+                        <input type="checkbox" class="header-settings-list-switch-checkbox">
+                        <span class="header-settings-list-switch-slider"></span>
+                    </label>
                 </li>
-                <li class="settings-list-item"><p>Вітаємо, User!</p></li>
+                <li class="header-settings-list-item"><p class="header-settings-list-text">Вітаємо, User!</p></li>
             </ul>
         </div>
     </header>   
@@ -141,12 +143,14 @@
     </section>
     <footer class="footer">
         <div class="container">
-            <a href=""class="footer-logo">
-                <svg width="40" height="38.15">
-                    <use href="./symbol-defs.svg#icon-header"></use>
+            <a href="" class="logo">
+                <svg width="40" height="38.15" class="logo-svg">
+                    <use href="./symbol-defs.svg#icon-logo"></use>
                 </svg>
-                Coding Magic
-            </a> 
+                <div class="logo-text-wrapper">
+                    Coding <span class="logo-text-stylized">Magic</span>
+                </div>
+            </a>
             <ul class="footer-social-list">
                 <li><a href="">Тел: +38 (123) 456 78 90</a></li>
                 <li><a href="">E-Mail: codingmagic@gmail.com</a></li>
@@ -162,6 +166,7 @@
         </div>
     </footer>
 
+    <script src="./js/dark-mode.js"></script>
     <script src="./js/birth-year.js"></script>
     <script src="./js/dino.js"></script>
     <script src="./js/football.js"></script>

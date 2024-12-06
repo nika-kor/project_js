@@ -1,0 +1,43 @@
+body {
+    background-color: $white;
+    color: $black;
+
+    h2 {
+        color: $black;
+    }
+
+    .header-nav-list-svg {
+        stroke: $black;
+    }
+    
+    &.dark {
+        background-color: #222222;
+        color: $white;
+
+        h2 {
+            color: $white;
+        }
+
+        button:has(svg) {
+            background-color: $white;
+
+            svg {
+                fill: $black;
+            }
+        }
+
+        .logo {
+            &-svg {
+                fill: $white;
+            }
+
+            &-text-wrapper {
+                color: $white;
+            }
+        }
+
+        .header-nav-list-svg {
+            stroke: $white;
+        }
+    }
+}
