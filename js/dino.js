@@ -259,10 +259,10 @@ function updateGameArea () {
     switch(theme) {
         case 'dark':
             gameArea.ctx.fillStyle = 'white';
-            gameArea.canvas.style.backgroundColor = '#121212';
+            gameArea.canvas.style.backgroundColor = '#222222';
             break;
         case 'light':
-            gameArea.ctx.fillStyle = '#121212';
+            gameArea.ctx.fillStyle = '#222222';
             gameArea.canvas.style.backgroundColor = 'white';
             break;
     }
