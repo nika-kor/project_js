@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
@@ -57,6 +60,27 @@
     </section>
     <section class="rps">
         <div class="container">
+            <div class="rps-container">
+                <div class="rps-container-choice">
+                    <h1 class="rps-title">Камінь - ножиці - папір</h1>
+                    <div class="rps-content">
+                        <div class="rps-choices">
+                            <button class="rps-choice-btn" id="stone"><img src="./image/stone.png" alt="Stone"></button>
+                            <button class="rps-choice-btn" id="scissors"><img src="./image/scissors.png" alt="Scissors"></button>
+                            <button class="rps-choice-btn" id="paper"><img src="./image/paper.png" alt="Paper"></button>
+                        </div>
+                        <div class="rps-results">
+                            <p id="message" class="rps-message"></p>
+                            <p id="choices" class="rps-choices-text">Варіант комп’ютера</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rps-score">
+                    <p class="rps-score-text">Рахунок:</p>
+                    <p id="computer-score" class="rps-score-text">Комп'ютер - 0</p>
+                    <p id="user-score" class="rps-score-text">Ви - 0</p>
+                </div>
+            </div>
             <ul class="rps-list">
                 <li class="rps-list-item"><img src="" alt="" class="rps-list-img"></li>
                 <li class="rps-list-item"><img src="" alt="" class="rps-list-img"></li>
@@ -159,5 +183,6 @@
             </div>
         </div>
     </footer>
+    <script src="./js/rps.js"></script>
 </body>
 </html>
