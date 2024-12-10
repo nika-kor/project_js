@@ -20,9 +20,9 @@
             <nav class="nav-list">
                 <li class="nav-list-item">Інтерактив
                     <ul class="nav-list-submenu">
-                        <li><button class="numercial-btn">Числовий</button></li>
-                        <li><button class="game-btn">Ігровий</button></li>
-                        <li><button class="acquaintance-btn">Ознайомчий</button></li>
+                        <li><button class="numerical-btn" onclick="toggleOn('numerical')">Числовий</button></li>
+                        <li><button class="game-btn" onclick="toggleOn('game')">Ігровий</button></li>
+                        <li><button class="acquaintance-btn" onclick="toggleOn('acquaintance')">Ознайомчий</button></li>
                     </ul>
                 </li>
                 <li class="nav-list-item">Наша команда</li>
@@ -41,119 +41,37 @@
             </ul>
         </div>
     </header>   
-    <!-- <section class="hero">
-        <div class="container">
-            <h1 class="hero-title">Популярні інетрактивні ігри</h1>
-        </div>
-    </section>
-    <section class="birth-year-check">
-        <div class="container">
-            <h2 class="birth-year-check-h2">Перевір в який рік ти народився</h2>
-            <input type="text" class="birth-year-check-input" placeholder="Введіть рік народження">
-            <button class="birth-year-check-btn"></button>
-            <p class="birth-year-check-text">Ви народилися у високосний рік!</p>
-        </div>
-    </section>  
-    <section class="number-guessing-game">
-        <div class="container">
-            <h2 class="number-guessing-game-h2">Вгадай число, яке загадав комп’ютер</h2>
-            <input type="text" class="number-guessing-game-input">
-            <button class="number-guessing-game-btn"></button>
-            <p class="number-guessing-game">Вітаю, ви вгадали число! (number) </p>
-        </div>
-    </section>
-    <section class="rps">
-        <div class="container">
-            <ul class="rps-list">
-                <li class="rps-list-item"><img src="" alt="" class="rps-list-img"></li>
-                <li class="rps-list-item"><img src="" alt="" class="rps-list-img"></li>
-                <li class="rps-list-item"><img src="" alt="" class="rps-list-img"></li>
-            </ul>
-            <ul class="rps-score-list">
-                <li class="rps-score-list-item">
-                    <p class="rps-score-list-p">Рахунок:</p>
-                </li>
-                <li class="rps-score-list-item">
-                    <p class="rps-score-list-p">Комп’ютер - 0</p>
-                </li>
-                <li class="rps-game-score-list-item">
-                    <p class="rps-score-list-p">Ви - 0</p>
-                </li>
-            </ul>
-            <p class="rps-text">Ви виграли раунд!</p>
-            <button class="rps-btn">Варіант комп’ютера</button>
-        </div>
-    </section>
-    <section class="calculator">
-        <div class="container">
-            <h2 class="calculator-h2">Калькулятор</h2>
-            <input type="text" class="calculator-input" placeholder="Введіть число">
-            <ul class="math-operators-list">
-                <li class="math-operators-list-item"><button class="math-operators-list-btn">+</button></li>
-                <li class="math-operators-list-item"><button class="math-operators-list-btn">*</button></li>
-                <li class="math-operators-list-item"><button class="math-operators-list-btn">-</button></li>
-                <li class="math-operators-list-item"><button class="math-operators-list-btn">/</button></li>
-            </ul>
-            <input type="text" class="calculator-input" placeholder="Введіть число">
-            <button class="equal-btn">=</button>
-            <input type="text" class="calculator-input-result" placeholder="Результат">
-        </div>
-    </section>
-    <section class="time-calculator">
-        <div class="container">
-            <h2 class="time-calculator-h2">Калькулятор часу</h2>
-            <input type="text"class="time-calculator-input" placeholder="Введіть число">
-            <button class="time-calculator-btn"></button>
-            <p class="time-calculator-text">3 дн. 15:45:01</p>
-        </div>
-    </section>
-    <section class="football">
-        <div class="container">
-            <h2 class="football-h2">Футбол</h2>
-            <div class="football-field">
-                <div class="football-ball"></div>
-            </div>
-        </div>
-    </section>
-    <section class="enter-numbers">
-        <div class="container">
-            <h2 class="enter-numbers-h2">Введіть 3 числа</h2>
-            <input type="text" class="enter-numbers-input" placeholder="Введіть число">
-            <input type="text" class="enter-numbers-input" placeholder="Введіть число">
-            <input type="text" class="enter-numbers-input" placeholder="Введіть число">
-        </div>
-        <p class="enter-numbers-text">Найбільше число, яке ви ввели - (число)</p>
-    </section> -->
+    
 
     <section class="numerical" id="1">
-        <h1>Високосний калькулятор</h1>
+
     </section>
     <section class="numerical" id="2">
-        <h2>Вгадай число</h2>
+
     </section>
     <section class="game" id="3">
-        <h2>Камінь-Ножиці-Папір</h2>
+
     </section>
     <section class="numerical" id="4">
-        <h2>Калькулятор</h2>
+
     </section>
     <section class="numerical" id="5">
-        <h2>Калькулятор часу</h2>
+
     </section>
     <section class="game" id="6">
-        <h2>Google динозаврик</h2>
+
     </section>
     <section class="game" id="7">
-        <h2>Футбол</h2>
+
     </section>
     <section class="numerical" id="8">
-        <h2>Найбільше число</h2>
+
     </section>
 
     <section class="acquaintance container section-slider" id="9">
     </section>
 
-    <section class="acquaintance container" id="10"> 
+    <section class="acquaintance container section-science" id="10"> 
     </section>
 
     <footer class="footer">

@@ -9,25 +9,51 @@
 //     background-color: #f0f0f0;
 //   }
 
-.our-team-slider {
-    overflow: hidden;
+.section-slider{
+    position: relative;
+    &::before {
+    content: "";
+    width: 536px;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    // left: 50%;
+    // right: 50%;
+    transform: translateX(-50%);
+    left: 50%;
+}}
+
+.our-team-title {
+    // font-family: Montserrat Alternates;
+    font-weight: 400;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    padding-bottom: 36px;
+    padding-top: 35px;
 }
+
+// .our-team-slider {
+//     overflow: hidden;
+// }
   
 .our-team-slides {
     display: flex;
     flex-direction: row;
     position: relative;
     width: 800px;
-    height: 400px;
+    // height: 300px;
     // overflow: hidden;
     margin: 0 auto;
     transition: 1s;
 
 }
 .our-team-slider {
+    overflow: hidden;
     position: relative;
     width: 800px;
-    height: 400px;
+    // height: 400px;
     margin: 0 auto;
 }
 
@@ -54,16 +80,17 @@
 .our-team-img {
     width: 150px;
     height: 150px;
+    border-radius: 20px;
 }
 .our-team-name-text{
-    // font-family: Montserrat Alternates;
+    font-family: Montserrat Alternates;
     font-weight: 400;
     text-align: center;
     font-size: 14px;
     color: black;
 }
 .our-team-work-text{
-    // font-family: Montserrat Alternates;
+    font-family: Montserrat Alternates;
     font-weight: 400;
     text-align: center;
     font-size: 12px;
@@ -76,16 +103,21 @@
     top: 50%;
       
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    // color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
     font-size: 18px;
     border-radius: 50%;
-    &:hover{
-        background-color: rgba(0, 0, 0, 0.8);
+    & svg:hover{
+        fill: black;
     }
+}
+
+.our-team-btn-prev svg {
+    width: 24px;
+    height: 24px;
+    fill: rgba(0, 0, 0, 0.5);
 }
 
   
@@ -95,4 +127,30 @@
   
 .our-team-btn-next {
     right: 10px;
+}
+
+
+
+
+
+
+.our-team-buttons-lines{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-top: 20px;
+    padding-top: 24px;
+    padding-bottom: 36px;
+    gap: 6px;
+}
+
+.line-btn{
+    width: 18px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #D9D9D9;
+    cursor: pointer;
+    &.active{
+        background-color: black;
+    }
 }
