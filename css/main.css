@@ -60,6 +60,27 @@ body {
   background-color: white;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #bdbdbd;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8acdcf;
+  border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #6ba0a1;
+}
+
 .section-science {
   position: relative;
 }
@@ -332,5 +353,6 @@ body {
   cursor: pointer;
 }
 .line-btn.active {
-  background-color: black;
+  width: 30px;
+  background-color: #797979;
 }/*# sourceMappingURL=main.css.map */

@@ -88,7 +88,7 @@ const buttonsOnBottomList = document.createElement('div');
 buttonsOnBottomList.classList.add('our-team-buttons-lines');  
 
 const buttonsOnBottomFirst = document.createElement('button');
-buttonsOnBottomFirst.classList.add('line-btn');
+buttonsOnBottomFirst.classList.add('line-btn','active');
 
 const buttonsOnBottomSecond = document.createElement('button');
 buttonsOnBottomSecond.classList.add('line-btn');
