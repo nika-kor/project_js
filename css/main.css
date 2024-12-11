@@ -81,10 +81,10 @@ body {
   background-color: #6ba0a1;
 }
 
-.section-science {
+.line {
   position: relative;
 }
-.section-science::before {
+.line::before {
   content: "";
   width: 536px;
   height: 1px;
@@ -230,21 +230,6 @@ body {
   text-align: center;
 }
 
-.section-slider {
-  position: relative;
-}
-.section-slider::before {
-  content: "";
-  width: 536px;
-  height: 1px;
-  background-color: black;
-  position: absolute;
-  top: 0;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  left: 50%;
-}
-
 .dark .our-team-title {
   color: white;
 }
@@ -333,6 +318,7 @@ body {
 .our-team-btn-next {
   position: absolute;
   top: 50%;
+  color: black;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   border: none;
@@ -343,13 +329,13 @@ body {
 }
 .our-team-btn-prev svg:hover,
 .our-team-btn-next svg:hover {
-  fill: black;
+  fill: currentColor;
 }
 
 .our-team-btn-prev svg {
   width: 24px;
   height: 24px;
-  fill: rgba(0, 0, 0, 0.5);
+  fill: currentColor;
 }
 
 .our-team-btn-prev {
@@ -387,6 +373,17 @@ body {
 .line-btn.active {
   width: 30px;
   background-color: #797979;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.line-btn.active:hover {
+  width: 30px;
+  background-color: #5c5b5b;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.line-btn:hover {
+  background-color: rgb(184, 183, 183);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }/*# sourceMappingURL=main.css.map */

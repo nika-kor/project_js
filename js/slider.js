@@ -1,29 +1,28 @@
 const slidesFilling = [
     {
         img: '../image/nika.jpg', 
-        name: 'nika', 
-        work: 'Інформація про роботу, яку він/вона виконав/ла'
-    },
-
-    {
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvDKV7L91pePEUNFbnS1mOzlWvsAQGY_S9RhB3vvd49G7TNBPCJpeytWgdt69s7IxSzFk&usqp=CAU', 
-        name: 'anton', 
-        work: 'Інформація про роботу, яку він/вона виконав/ла'
+        name: 'Nika', 
+        work: 'Team lead, слайдер нашої команди та два фільтри'
     },
     {
         img: '../image/misha.jpg', 
-        name: 'misha', 
-        work: 'Інформація про роботу, яку він/вона виконав/ла'
+        name: 'Misha', 
+        work: 'Гра динозаврик та футбол, секція перевірити рік'
     },
     {
         img: '../image/vika.jpg', 
-        name: 'vika', 
-        work: 'Інформація про роботу, яку він/вона виконав/ла'
+        name: 'Vika', 
+        work: 'модалка, секця вгадай число яке загадав комп\'ютер та введи три числа'
+    },
+    {
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvDKV7L91pePEUNFbnS1mOzlWvsAQGY_S9RhB3vvd49G7TNBPCJpeytWgdt69s7IxSzFk&usqp=CAU', 
+        name: 'Anton', 
+        work: 'Верстка сайту, та секція камінь ножиці папір'
     },
     {
         img: 'https://pngimg.com/uploads/square/square_PNG67.png', 
-        name: 'oleksiy', 
-        work: 'Інформація про роботу, яку він/вона виконав/ла'
+        name: 'Oleksiy', 
+        work: 'Калькулятор та калькулятор часу'
     },
 ]
 
@@ -42,33 +41,18 @@ slider.classList.add('our-team-slider');
 const btnPrev = document.createElement('button');
 btnPrev.classList.add('our-team-btn-prev');
 
-const svgPrev = document.createElement('svg');
-svgPrev.setAttribute('width', '24');
 
-const usePrev = document.createElement('use');
-usePrev.setAttribute('href', '../symbol-defs.svg#arrowLeft');
+const svgPrev = '<svg width="50" height="100"><use href="./symbol-defs.svg#arrowLeft"></use></svg>'
 
-svgPrev.append(usePrev);
-btnPrev.append(svgPrev);
-// btnPrev.textContent = '«';
+btnPrev.innerHTML = svgPrev
+
 
 const btnNext = document.createElement('button');
 btnNext.classList.add('our-team-btn-next');
-// btnNext.textContent = '»';
-
-
-// const slidesWrapper = document.createElement('div');
-// slidesWrapper.classList.add('our-team-slides');
-
-// const img = document.createElement('img');
-// const nameText = document.createElement('p');
-// const workText = document.createElement('p');
-
 
 
 
 section.append(title, slider);
-
 
 
 // slides.append(img, nameText, workText);
@@ -111,13 +95,6 @@ buttonsOnBottomList.append(buttonsOnBottomFirst, buttonsOnBottomSecond, buttonsO
 // move slides when pressing buttons
 
 
-
-
-
-
-
-
-
 let currentSlide = 0;
 
 
@@ -143,13 +120,8 @@ function moveSlides(position) {
 }
 
 
-
-
-
 btnPrev.addEventListener('click', function () {moveSlides(currentSlide -1)});
 btnNext.addEventListener('click', function() {moveSlides(currentSlide +1)});
-
-
 
 
 

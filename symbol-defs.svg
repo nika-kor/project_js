@@ -3,7 +3,7 @@
 
 
 <symbol id="arrowLeft" viewBox="0 0 16 32">
-<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.3137" d="M16 0.314l-15.686 15.686 15.686 15.686"></path>
+<path fill="" style="" d="M16 0.314l-15.686 15.686 15.686 15.686"></path>
 </symbol>
 <symbol id="arrowRight" viewBox="0 0 16 32">
 <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.3137" d="M0.314 0.314l15.686 15.686-15.686 15.686"></path>
