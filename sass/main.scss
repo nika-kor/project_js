@@ -1,4 +1,5 @@
 @import "./base/reset";
+@import "./base/variables";
 
 @import "./abstracts/mixins";
 @import "./abstracts/variables";
@@ -21,3 +22,7 @@
 @import "./layout/birth-year";
 @import "./layout/dino";
 @import "./layout/football";
+
+// vika
+
+@import "./layout/guessing";
