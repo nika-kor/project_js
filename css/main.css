@@ -45,6 +45,20 @@ body {
   margin: 0 auto;
 }
 
+section {
+  position: relative;
+}
+section::before {
+  content: "";
+  width: 536px;
+  height: 1px;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
 body {
   background-color: #ffffff;
   color: #000000;
@@ -76,6 +90,15 @@ body.dark .logo-text-wrapper {
 }
 body.dark .header-nav-list-svg {
   stroke: #ffffff;
+}
+body.dark section::before {
+  background-color: #ffffff;
+}
+body.dark .birth-year-check-text {
+  color: #55ff55;
+}
+body.dark .birth-year-check-text.output-text-wrong {
+  color: #ff5555;
 }
 
 .header {

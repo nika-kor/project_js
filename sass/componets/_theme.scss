@@ -39,5 +39,17 @@ body {
         .header-nav-list-svg {
             stroke: $white;
         }
+
+        section::before {
+            background-color: $white;
+        }
+
+        .birth-year-check-text {
+            color: #55ff55;
+
+            &.output-text-wrong {
+                color: #ff5555;
+            }
+        }
     }
 }

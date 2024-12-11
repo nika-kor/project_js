@@ -7,7 +7,14 @@
     </div>
     <p class="birth-year-check-text">Ви народилися у високосний рік!</p>
 </div>
-*/  
+*/
+
+const yearCheckSection = document.querySelector('.birth-year-check');
+
+const yearCheckContainer = document.createElement('div');
+yearCheckContainer.classList.add('container');
+yearCheckContainer.classList.add('birth-year-check-container');
+yearCheckSection.appendChild(yearCheckContainer);
 
 const yearCheckTitle = document.createElement('h2');
 yearCheckTitle.classList.add('birth-year-check-title');
@@ -30,8 +37,6 @@ yearCheckBtn.innerHTML = '<svg width="15" height="15" class="birth-year-check-bt
 
 const yearCheckText = document.createElement('p');
 yearCheckText.classList.add('birth-year-check-text');
-
-const yearCheckContainer = document.querySelector('.birth-year-check>.container');
 
 yearCheckContainer.appendChild(yearCheckTitle);
 

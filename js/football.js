@@ -7,7 +7,12 @@
 </div>
 */
 
-const footballContainer = document.querySelector('.football-container');
+const footballSection = document.querySelector('.football');
+
+const footballContainer = document.createElement('div');
+footballContainer.classList.add('container');
+footballContainer.classList.add('football-container');
+footballSection.appendChild(footballContainer);
 
 const footballTitle = document.createElement('h2');
 footballTitle.classList.add('football-title');

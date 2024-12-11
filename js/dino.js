@@ -1,7 +1,12 @@
+// <div class="container dino-container"></div>
+const dinoSection = document.querySelector('.dino');
+const dinoContainer = document.createElement('div');
+dinoContainer.classList.add('container');
+dinoContainer.classList.add('dino-container');
+dinoSection.appendChild(dinoContainer);
 const dinoTitle = document.createElement('h2');
 dinoTitle.classList.add('dino-title');
 dinoTitle.textContent = 'Google динозавр';
-const dinoContainer = document.querySelector('.dino-container');
 dinoContainer.appendChild(dinoTitle);
 
 // тема, задана перемикачем
