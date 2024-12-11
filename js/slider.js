@@ -1,16 +1,16 @@
 const slidesFilling = [
     {
-        img: '../image/nika.jpg', 
+        img: './image/nika.jpg', 
         name: 'Nika', 
         work: 'Team lead, слайдер нашої команди та два фільтри'
     },
     {
-        img: '../image/misha.jpg', 
+        img: './image/misha.jpg', 
         name: 'Misha', 
         work: 'Гра динозаврик та футбол, секція перевірити рік'
     },
     {
-        img: '../image/vika.jpg', 
+        img: './image/vika.jpg', 
         name: 'Vika', 
         work: 'модалка, секця вгадай число яке загадав комп\'ютер та введи три числа'
     },
