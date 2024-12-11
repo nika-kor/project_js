@@ -3,34 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding</title>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap" rel="stylesheet">
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <a href=""class="logo">
-                <svg width="40" height="38.15">
-                    <use href=""></use>
+        <div class="container header-container">
+            <a href="" class="logo">
+                <svg width="40" height="38.15" class="logo-svg">
+                    <use href="./symbol-defs.svg#icon-logo"></use>
                 </svg>
-                Coding Magic
-            </a> 
-            <nav class="nav-list">
-                <li class="nav-list-item">Інтерактив</li>
-                <li class="nav-list-item">Наша команда</li>
-                <li class="nav-list-item">Контакти</li>
+                <div class="logo-text-wrapper">
+                    Coding <span class="logo-text-stylized">Magic</span>
+                </div>
+            </a>
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-list-item">Інтерактив<svg width="9" height="5" class="header-nav-list-svg"><use href="./symbol-defs.svg#icon-arrow-down"></use></svg></li>
+                    <li class="header-nav-list-item">Наша команда</li>
+                    <li class="header-nav-list-item">Контакти</li>
+                </ul>
             </nav>
-            <ul class="settings-list">
-                <li class="settings-list-item">
-                    <div class="settings-list-switch">
-                        <input type="checkbox"  class="settings-list-switch-input">
-                        <label class="settings-list-switch-label">
-                          <span class="settings-list-switch-span"></span>
-                        </label>
-                    </div> 
+            <ul class="header-settings-list">
+                <li class="header-settings-list-item">
+                    <label class="header-settings-list-switch">
+                        <input type="checkbox" class="header-settings-list-switch-checkbox">
+                        <span class="header-settings-list-switch-slider"></span>
+                    </label>
                 </li>
-                <li class="settings-list-item"><p>Вітаємо, User!</p></li>
+                <li class="header-settings-list-item"><p class="header-settings-list-text">Вітаємо, User!</p></li>
             </ul>
         </div>
     </header>   
@@ -39,14 +44,9 @@
             <h1 class="hero-title">Популярні інетрактивні ігри</h1>
         </div>
     </section>
-    <section class="birth-year-check">
-        <div class="container">
-            <h2 class="birth-year-check-title">Перевір в який рік ти народився</h2>
-            <input type="text" class="birth-year-check-input" placeholder="Введіть рік народження">
-            <button class="birth-year-check-btn"></button>
-            <p class="birth-year-check-text">Ви народилися у високосний рік!</p>
-        </div>
-    </section>  
+
+    <section class="birth-year-check numerical"></section>
+      
     <section class="number-guessing-game">
         <div class="container">
             <h2 class="number-guessing-game-title">Вгадай число, яке загадав комп’ютер</h2>
@@ -55,6 +55,7 @@
             <p class="number-guessing-game">Вітаю, ви вгадали число! (number) </p>
         </div>
     </section>
+
     <section class="rps">
         <div class="container">
             <ul class="rps-list">
@@ -77,6 +78,7 @@
             <button class="rps-btn">Варіант комп’ютера</button>
         </div>
     </section>
+
     <section class="calculator">
         <div class="container">
             <h2 class="calculator-title">Калькулятор</h2>
@@ -92,6 +94,7 @@
             <input type="text" class="calculator-input-result" placeholder="Результат">
         </div>
     </section>
+
     <section class="time-calculator">
         <div class="container">
             <h2 class="time-calculator-title">Калькулятор часу</h2>
@@ -100,14 +103,11 @@
             <p class="time-calculator-text">3 дн. 15:45:01</p>
         </div>
     </section>
-    <section class="football">
-        <div class="container">
-            <h2 class="football-title">Футбол</h2>
-            <div class="football-field">
-                <div class="football-ball"></div>
-            </div>
-        </div>
-    </section>
+
+    <section class="dino game line"></section>
+
+    <section class="football game line"></section>
+  
     <section class="enter-numbers">
         <div class="container">
             <h2 class="enter-numbers-title">Введіть 3 числа</h2>
@@ -117,6 +117,7 @@
             <p class="enter-numbers-text">Найбільше число, яке ви ввели - (число)</p>
         </div>
     </section>
+
     <section class="our-team">
         <div class="container">
             <h2 class="our-team-title">Наша команда</h2>
@@ -129,22 +130,26 @@
                 <button class="our-team-btn-prev" >&#10094;</button>
                 <button class="our-team-btn-next" >&#10095;</button>
             </div>
-            <p class="our-team-name-text">Ім’я студента</p>
-            <p class="our-team-text">Інформація про роботу, яку він/вона виконав/ла</p>
+                <p class="our-team-name-text">Ім’я студента</p>
+                <p class="our-team-text">Інформація про роботу, яку він/вона виконав/ла</p>
             <div class="our-team-slider-info"></div>
         </div>
     </section>
+
     <section class="сhoose-scientist"> 
         <h1>Обери вченого/их</h1>
     </section>
+    
     <footer class="footer">
         <div class="container">
-            <a href=""class="footer-logo">
-                <svg width="40" height="38.15">
-                    <use href="./symbol-defs.svg#icon-header"></use>
+            <a href="" class="logo">
+                <svg width="40" height="38.15" class="logo-svg">
+                    <use href="./symbol-defs.svg#icon-logo"></use>
                 </svg>
-                Coding Magic
-            </a> 
+                <div class="logo-text-wrapper">
+                    Coding <span class="logo-text-stylized">Magic</span>
+                </div>
+            </a>
             <ul class="footer-social-list">
                 <li><a href="">Тел: +38 (123) 456 78 90</a></li>
                 <li><a href="">E-Mail: codingmagic@gmail.com</a></li>
@@ -159,5 +164,10 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/dark-mode.js" type="module"></script>
+    <script src="./js/birth-year.js" type="module"></script>
+    <script src="./js/dino.js" type="module"></script>
+    <script src="./js/football.js" type="module"></script>
 </body>
 </html>

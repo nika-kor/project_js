@@ -1,0 +1,11 @@
+.dino {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    &-container {
+        @include flex(_, center, 36px, _, column);
+    }
+
+    &-title {
+        @include typography(inherit, 16px, 400, 19.5px, center);
+    }
+}
