@@ -314,6 +314,8 @@ body.dark .birth-year-check-text.output-text-wrong {
   color: black;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  -webkit-box-shadow: 3px 3px 0px 0px #4d4d4d;
+          box-shadow: 3px 3px 0px 0px #4d4d4d;
 }
 .dark .scientist-btn:hover {
   background-color: black;
