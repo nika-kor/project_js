@@ -1,8 +1,22 @@
 @import "./base/reset";
 
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
 @import "./components/container";
 @import "./components/scrol";
 @import "./components/line";
+@import "./componets/theme";
+
+// nika
 
 @import "./layout/scientists";
 @import "./layout/slider";
+
+// misha
+
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/birth-year";
+@import "./layout/dino";
+@import "./layout/football";

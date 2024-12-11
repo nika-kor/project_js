@@ -14,60 +14,74 @@
 <body>
     <!-- header -->
     <header class="header">
-        <div class="container">
-            <a href=""class="logo">
-                <svg width="40" height="38.15">
-                    <use href=""></use>
+        <div class="container header-container">
+            <a href="" class="logo">
+                <svg width="40" height="38.15" class="logo-svg">
+                    <use href="./symbol-defs.svg#icon-logo"></use>
                 </svg>
-                Coding Magic
-            </a> 
-            <nav class="nav-list">
-                <li class="nav-list-item">Інтерактив
+                <div class="logo-text-wrapper">
+                    Coding <span class="logo-text-stylized">Magic</span>
+                </div>
+            </a>
+            <nav class="header-nav">
+                <ul class="header-nav-list"></ul>
+                <li class="header-nav-list-item">Інтерактив<svg width="9" height="5" class="header-nav-list-svg"><use href="./symbol-defs.svg#icon-arrow-down"></use></svg>
                     <ul class="nav-list-submenu">
                         <li><button class="numerical-btn" onclick="toggleOn('numerical')">Числовий</button></li>
                         <li><button class="game-btn" onclick="toggleOn('game')">Ігровий</button></li>
                         <li><button class="acquaintance-btn" onclick="toggleOn('acquaintance')">Ознайомчий</button></li>
                     </ul>
                 </li>
-                <li class="nav-list-item">Наша команда</li>
-                <li class="nav-list-item">Контакти</li>
+                <li class="header-nav-list-item">Наша команда</li>
+                <li class="header-nav-list-item">Контакти</li>
             </nav>
-            <ul class="settings-list">
-                <li class="settings-list-item">
-                    <div class="settings-list-switch">
-                        <input type="checkbox"  class="settings-list-switch-input">
-                        <label class="settings-list-switch-label">
-                          <span class="settings-list-switch-span"></span>
-                        </label>
-                    </div> 
+            <ul class="header-settings-list">
+                <li class="header-settings-list-item">
+                    <label class="header-settings-list-switch">
+                        <input type="checkbox" class="header-settings-list-switch-checkbox">
+                        <span class="header-settings-list-switch-slider"></span>
+                    </label>
                 </li>
-                <li class="settings-list-item"><p>Вітаємо, User!</p></li>
+                <li class="header-settings-list-item"><p class="header-settings-list-text">Вітаємо, User!</p></li>
             </ul>
         </div>
     </header>   
     
 
-    <section class="numerical" id="1">
+    </section>
+    <section class="birth-year-check numerical" id="1">
+    </section>
 
     </section>
-    <section class="numerical line" id="2">
+    <section class="calculator">
+        <div class="container">
+            <h2 class="calculator-title">Калькулятор</h2>
+            <input type="text" class="calculator-input" placeholder="Введіть число">
+            <ul class="math-operators-list">
+                <li class="math-operators-list-item"><button class="math-operators-list-btn">+</button></li>
+                <li class="math-operators-list-item"><button class="math-operators-list-btn">*</button></li>
+                <li class="math-operators-list-item"><button class="math-operators-list-btn">-</button></li>
+                <li class="math-operators-list-item"><button class="math-operators-list-btn">/</button></li>
+            </ul>
+            <input type="text" class="calculator-input" placeholder="Введіть число">
+            <button class="equal-btn">=</button>
+            <input type="text" class="calculator-input-result" placeholder="Результат">
+        </div>
     </section>
-    <section class="game line" id="3">
+
+
+    <section class="time-calculator">
+        <div class="container">
+            <h2 class="time-calculator-title">Калькулятор часу</h2>
+            <input type="text"class="time-calculator-input" placeholder="Введіть число">
+            <button class="time-calculator-btn"></button>
+            <p class="time-calculator-text">3 дн. 15:45:01</p>
+        </div>
+    </section>
+    <section class="dino game line" id="7">
 
     </section>
-    <section class="numerical line" id="4">
-
-    </section>
-    <section class="numerical line" id="5">
-
-    </section>
-    <section class="game line" id="6">
-
-    </section>
-    <section class="game line" id="7">
-
-    </section>
-    <section class="numerical line" id="8">
+    <section class="football numerical line" id="8">
 
     </section>
 
@@ -79,12 +93,14 @@
 
     <footer class="footer">
         <div class="container">
-            <a href=""class="footer-logo">
-                <svg width="40" height="38.15">
-                    <!-- <use href="./symbol-defs.svg#icon-header"></use> -->
+            <a href="" class="logo">
+                <svg width="40" height="38.15" class="logo-svg">
+                    <use href="./symbol-defs.svg#icon-logo"></use>
                 </svg>
-                Coding Magic
-            </a> 
+                <div class="logo-text-wrapper">
+                    Coding <span class="logo-text-stylized">Magic</span>
+                </div>
+            </a>
             <ul class="footer-social-list">
                 <li><a href="">Тел: +38 (123) 456 78 90</a></li>
                 <li><a href="">E-Mail: codingmagic@gmail.com</a></li>
@@ -99,8 +115,16 @@
             </div>
         </div>
     </footer>
+
+    <!-- nika -->
     <script type="module" src="./js/filter.js"></script>
     <script type="module" src="./js/slider.js"></script>
     <script type="module" src="./js/scientists.js"></script>
+
+    <!-- misha -->
+    <script src="./js/dark-mode.js" type="module"></script>
+    <script src="./js/birth-year.js" type="module"></script>
+    <script src="./js/dino.js" type="module"></script>
+    <script src="./js/football.js" type="module"></script>
 </body>
 </html>

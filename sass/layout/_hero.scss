@@ -1,0 +1,7 @@
+.hero {
+    padding: 36px 0;
+
+    &-title {
+        @include typography(inherit, 24px, 400, 29.26px, center);
+    }
+}
