@@ -1,4 +1,18 @@
-.container{
-    width: 1113px;
+.container {
+    width: 1090px;
     margin: 0 auto;
+}
+
+section {
+    position: relative;
+    &::before {
+        content: "";
+        width: 536px;
+        height: 1px;
+        background-color: $black;
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+        left: 50%;
     }
+}

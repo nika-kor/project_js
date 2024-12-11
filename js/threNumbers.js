@@ -8,23 +8,25 @@ container.classList.add("container");
 sectionEnterNumbersGame.appendChild(container);
     
 const EnterNumbersTitle = document.createElement("h2");
-EnterNumbersTitle.classList.add("enter-numbers-h2");
+EnterNumbersTitle.classList.add("enter-numbers-title");
 EnterNumbersTitle.textContent = "Введіть 3 числа";
 container.appendChild(EnterNumbersTitle);
-
 
 const EnterNumbersForm = document.createElement("form");
 EnterNumbersForm.classList.add("enter-numbers-form");
 container.appendChild(EnterNumbersForm);
 
+
 for (let i = 1; i <= 3; i++) {
+    const inpContainer = document.createElement("div");
+    inpContainer.classList.add(`enter-numbers-input-wrapper`);
     const input = document.createElement("input");
     input.classList.add("enter-numbers-input");
-    input.type = "text";
+    input.type = "number";
     input.placeholder = `Введіть число`;
-    EnterNumbersForm.appendChild(input);
+    inpContainer.appendChild(input);
+    EnterNumbersForm.appendChild(inpContainer);
 }
-
 
 const EnterNumbersDesc = document.createElement("p");
 EnterNumbersDesc.classList.add("enter-numbers-text");

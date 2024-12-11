@@ -1,0 +1,73 @@
+.number-guessing-game{
+    padding: 36px 0;
+
+    &-input{
+        border-radius: 20px 0 0 20px;
+        height: 35px;
+        width: 180px;
+        padding: 10px;
+        background-color: $input-grey;
+        color: rgba(215, 215, 215, 1);
+        border: none;
+    }
+
+    &-btn{
+        border-radius: 0 20px 20px 0;
+        height: 35px;
+        width: 35px;
+        background-color: $black;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.number-guessing-game-title{
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 0.8;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.guessing-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // gap: 202px;
+    max-width: 576px;
+    margin: 0 auto;
+}
+
+.number-guessing-game-desc{
+    display: block;
+    width: 100px;
+    height: 1px;
+}
+
+.guessing-container{
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::before{
+        content: "";
+        width: 215px;
+        height: 35px;
+        position: absolute;
+        z-index: -1;
+        border-radius: 20px;
+        top: 3px;
+        left: 3px;
+        background-color: $dgrey;
+    }
+}
+
+.number-guessing-game-desc{
+    color: rgba(3, 153, 0, 1);
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 12px;
+    min-width: 224px;
+    text-align: right;
+}
