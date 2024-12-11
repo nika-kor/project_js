@@ -4,22 +4,19 @@ ul {
   padding: 0;
 }
 
-li {
-  margin: 0;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6, p, li {
   margin: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+input {
+  border: none;
+}
+input:focus {
+  outline: none;
 }
 
 button {
@@ -39,9 +36,17 @@ address {
 }
 
 img {
-  max-width: 100%;
   display: block;
   height: auto;
+  max-width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+body {
+  font-family: "Montserrat Alternates";
 }
 
 body {
@@ -94,6 +99,111 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   left: 50%;
+}
+
+body {
+  background-color: rgb(245, 239, 239);
+  color: #000000;
+}
+body h2 {
+  color: #000000;
+}
+body .header-nav-list-svg {
+  stroke: #000000;
+}
+body.dark {
+  background-color: #4d4d4d;
+  color: #ffffff;
+}
+body.dark .container {
+  background-color: #222;
+}
+body.dark h2 {
+  color: #ffffff;
+}
+body.dark button:has(svg) {
+  background-color: #ffffff;
+}
+body.dark button:has(svg) svg {
+  fill: #000000;
+}
+body.dark .logo-svg {
+  fill: #ffffff;
+}
+body.dark .logo-text-wrapper {
+  color: #ffffff;
+}
+body.dark .header-nav-list-svg {
+  stroke: #ffffff;
+}
+body.dark section::before {
+  background-color: #ffffff;
+}
+body.dark .birth-year-check-text {
+  color: #55ff55;
+}
+body.dark .birth-year-check-text.output-text-wrong {
+  color: #ff5555;
+}
+
+.relative {
+  position: relative;
+}
+
+.dark .sub-menu {
+  background-color: #222;
+}
+
+.dark .sub-menu-link {
+  color: white;
+}
+.dark .sub-menu-link:hover {
+  background-color: #4d4d4d;
+}
+
+.sub-menu {
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  font-size: 13px;
+  width: 110px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 1px solid transparent;
+  border-top: none;
+  z-index: 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.sub-menu-link {
+  background: none;
+  color: black;
+  padding: 4px 0;
+  display: block;
+  width: 110px;
+  text-align: center;
+}
+.sub-menu-link:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 110px;
+  background-color: #F1F1F1;
+}
+
+.sub-menu:hover,
+.relative:hover .sub-menu {
+  height: auto;
+  max-height: 105px;
+  border-color: #000000;
+  z-index: 1;
+}
+
+.dark .sub-menu:hover,
+.dark .relative:hover .sub-menu {
+  border-color: white;
 }
 
 .scientists-title {
@@ -306,12 +416,20 @@ body {
   color: black;
 }
 
+.dark .our-team-name-text {
+  color: white;
+}
+
 .our-team-work-text {
   font-family: "Montserrat Alternates";
   font-weight: 400;
   text-align: center;
   font-size: 12px;
   color: black;
+}
+
+.dark .our-team-work-text {
+  color: white;
 }
 
 .our-team-btn-prev,
@@ -326,16 +444,20 @@ body {
   cursor: pointer;
   font-size: 18px;
   border-radius: 50%;
-}
-.our-team-btn-prev svg:hover,
-.our-team-btn-next svg:hover {
-  fill: currentColor;
+  background: none;
 }
 
-.our-team-btn-prev svg {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
+.dark .our-team-btn-prev,
+.dark .our-team-btn-next {
+  color: white;
+  background: none;
+}
+
+.our-team-btn-prev svg,
+.our-team-btn-next svg {
+  width: 50px;
+  height: 100px;
+  stroke: currentColor;
 }
 
 .our-team-btn-prev {
@@ -386,4 +508,397 @@ body {
   background-color: rgb(184, 183, 183);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.dark .header {
+  background-color: #222;
+}
+
+.header {
+  padding: 21px 0;
+  background-color: white;
+  width: 100%;
+}
+.header-container {
+  max-width: 1090px;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 92px;
+  padding-left: 92px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: _;
+  -ms-flex-wrap: _;
+      flex-wrap: _;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: _;
+          flex-direction: _;
+}
+.header .logo {
+  margin-right: 81px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  text-align: right;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: _;
+  -ms-flex-wrap: _;
+      flex-wrap: _;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: _;
+          flex-direction: _;
+}
+.header .logo-svg {
+  fill: #000000;
+}
+.header .logo-text-wrapper {
+  margin-left: 9px;
+  width: 44px;
+  height: 35px;
+}
+.header .logo-text-stylized {
+  font-family: Sacramento;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17.51px;
+  text-align: right;
+}
+.header-nav {
+  margin-right: 361px;
+}
+.header-nav-list {
+  width: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  -ms-flex-wrap: _;
+      flex-wrap: _;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: _;
+          flex-direction: _;
+}
+.header-nav-list-item {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  text-align: left;
+}
+.header-nav-list-item:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  -ms-flex-wrap: _;
+      flex-wrap: _;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: _;
+          flex-direction: _;
+}
+.header-settings-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 51px;
+  -ms-flex-wrap: _;
+      flex-wrap: _;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: _;
+          flex-direction: _;
+}
+.header-settings-list-text {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  text-align: right;
+  width: 94px;
+}
+.header-settings-list-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+.header-settings-list-switch-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.header-settings-list-switch-checkbox:checked + span {
+  background-color: #cccccc;
+}
+.header-settings-list-switch-checkbox:checked + span::before {
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
+.header-settings-list-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #7a7a7a;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  border-radius: 10px;
+}
+.header-settings-list-switch-slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 0;
+  top: 0px;
+  background-color: white;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  border-radius: 50%;
+  background-image: url("../img/header-slider.png");
+  background-position: 0;
+}
+
+.hero {
+  padding: 36px 0;
+}
+.hero-title {
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29.26px;
+  text-align: center;
+}
+
+.birth-year-check {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.birth-year-check-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 36px;
+  -ms-flex-wrap: _;
+      flex-wrap: _;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.birth-year-check-title {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.5px;
+  text-align: center;
+  color: #000000;
+}
+.birth-year-check-bottom-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 202px;
+  -ms-flex-wrap: _;
+      flex-wrap: _;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: _;
+          flex-direction: _;
+}
+.birth-year-check-input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: _;
+  -ms-flex-wrap: _;
+      flex-wrap: _;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: _;
+          flex-direction: _;
+  -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.2509803922);
+          box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.2509803922);
+  border-radius: 20px;
+}
+.birth-year-check-input {
+  border-radius: 20px 0 0 20px;
+  height: 35px;
+  width: 180px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  text-align: left;
+  background-color: #D7D7D7;
+  color: #7E7E7E;
+}
+.birth-year-check-btn {
+  border-radius: 0 20px 20px 0;
+  height: 35px;
+  width: 35px;
+  background-color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: _;
+  -ms-flex-wrap: _;
+      flex-wrap: _;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: _;
+          flex-direction: _;
+}
+.birth-year-check-btn-svg {
+  fill: #ffffff;
+}
+.birth-year-check-text {
+  width: 230px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  text-align: right;
+  color: #039900;
+}
+.birth-year-check-text.output-text-wrong {
+  color: #990000;
+}
+
+.dino {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.dino-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 36px;
+  -ms-flex-wrap: _;
+      flex-wrap: _;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.dino-title {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.5px;
+  text-align: center;
+}
+
+.football {
+  padding: 36px 0;
+}
+.football-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 36px;
+  -ms-flex-wrap: _;
+      flex-wrap: _;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.football-title {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.5px;
+  text-align: center;
+}
+.football-field {
+  width: 720px;
+  height: 220px;
+  border: 2px solid #000000;
+  border-radius: 37px;
+  background-color: #5ABB58;
+}
+.football-ball {
+  width: 50px;
+  height: 50px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }/*# sourceMappingURL=main.css.map */

@@ -6,15 +6,14 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap" rel="stylesheet">
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <!-- header -->
     <header class="header">
-        <div class="container header-container">
+        <div class="header-container">
             <a href="" class="logo">
                 <svg width="40" height="38.15" class="logo-svg">
                     <use href="./symbol-defs.svg#icon-logo"></use>
@@ -23,17 +22,20 @@
                     Coding <span class="logo-text-stylized">Magic</span>
                 </div>
             </a>
-            <nav class="header-nav">
-                <ul class="header-nav-list"></ul>
-                <li class="header-nav-list-item">Інтерактив<svg width="9" height="5" class="header-nav-list-svg"><use href="./symbol-defs.svg#icon-arrow-down"></use></svg>
-                    <ul class="nav-list-submenu">
-                        <li><button class="numerical-btn" onclick="toggleOn('numerical')">Числовий</button></li>
-                        <li><button class="game-btn" onclick="toggleOn('game')">Ігровий</button></li>
-                        <li><button class="acquaintance-btn" onclick="toggleOn('acquaintance')">Ознайомчий</button></li>
-                    </ul>
-                </li>
-                <li class="header-nav-list-item">Наша команда</li>
-                <li class="header-nav-list-item">Контакти</li>
+            <ul class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-list-item relative">Інтерактив<svg width="9" height="5" class="header-nav-list-svg"><use href="./symbol-defs.svg#icon-arrow-down"></use></svg>
+                        <ul class="sub-menu">
+                            <li><button class="sub-menu-link numerical-btn" onclick="toggleOn('numerical')">Числовий</button></li>
+                            <li><button class="sub-menu-link game-btn" onclick="toggleOn('game')">Ігровий</button></li>
+                            <li><button class="sub-menu-link acquaintance-btn" onclick="toggleOn('acquaintance')">Ознайомчий</button></li>
+                        </ul>
+                    </li>
+                    <li class="header-nav-list-item">Наша команда</li>
+                    <li class="header-nav-list-item">Контакти</li>
+
+                </ul>
+            </ul>
             </nav>
             <ul class="header-settings-list">
                 <li class="header-settings-list-item">
@@ -49,39 +51,13 @@
     
 
     </section>
-    <section class="birth-year-check numerical" id="1">
+    <section class="birth-year-check numerical container" id="1">
     </section>
 
-    </section>
-    <section class="calculator">
-        <div class="container">
-            <h2 class="calculator-title">Калькулятор</h2>
-            <input type="text" class="calculator-input" placeholder="Введіть число">
-            <ul class="math-operators-list">
-                <li class="math-operators-list-item"><button class="math-operators-list-btn">+</button></li>
-                <li class="math-operators-list-item"><button class="math-operators-list-btn">*</button></li>
-                <li class="math-operators-list-item"><button class="math-operators-list-btn">-</button></li>
-                <li class="math-operators-list-item"><button class="math-operators-list-btn">/</button></li>
-            </ul>
-            <input type="text" class="calculator-input" placeholder="Введіть число">
-            <button class="equal-btn">=</button>
-            <input type="text" class="calculator-input-result" placeholder="Результат">
-        </div>
-    </section>
-
-
-    <section class="time-calculator">
-        <div class="container">
-            <h2 class="time-calculator-title">Калькулятор часу</h2>
-            <input type="text"class="time-calculator-input" placeholder="Введіть число">
-            <button class="time-calculator-btn"></button>
-            <p class="time-calculator-text">3 дн. 15:45:01</p>
-        </div>
-    </section>
-    <section class="dino game line" id="7">
+    <section class="dino game line container" id="7">
 
     </section>
-    <section class="football numerical line" id="8">
+    <section class="football game line container" id="8">
 
     </section>
 

@@ -42,13 +42,17 @@ const btnPrev = document.createElement('button');
 btnPrev.classList.add('our-team-btn-prev');
 
 
-const svgPrev = '<svg width="50" height="100"><use href="./symbol-defs.svg#arrowLeft"></use></svg>'
+const svgPrev = `<svg><use href="./symbol-defs.svg?v=${Date.now()}#arrowLeft"></use></svg>`
 
 btnPrev.innerHTML = svgPrev
 
 
 const btnNext = document.createElement('button');
 btnNext.classList.add('our-team-btn-next');
+
+const svgNext = `<svg><use href="./symbol-defs.svg?v=${Date.now()}#arrowRight"></use></svg>`
+
+btnNext.innerHTML = svgNext
 
 
 
