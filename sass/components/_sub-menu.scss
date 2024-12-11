@@ -2,16 +2,9 @@
     position: relative;
 }
 
-.dark .sub-menu {
-    background-color: #222;
-}
 
-.dark .sub-menu-link {
-    color: white;
-    &:hover {
-        background-color: #4d4d4d;
-    }
-}
+
+
 .sub-menu {
     // padding: 0 8px;
     max-height: 0;
@@ -62,5 +55,14 @@
     .sub-menu:hover,
     .relative:hover .sub-menu {
         border-color:white;
+    }
+    .sub-menu-link {
+        color: white;
+        &:hover {
+            background-color: #4d4d4d;
+        }
+    }
+    .sub-menu {
+        background-color: #222;
     }
 }

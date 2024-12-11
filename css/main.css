@@ -150,17 +150,6 @@ body.dark .birth-year-check-text.output-text-wrong {
   position: relative;
 }
 
-.dark .sub-menu {
-  background-color: #222;
-}
-
-.dark .sub-menu-link {
-  color: white;
-}
-.dark .sub-menu-link:hover {
-  background-color: #4d4d4d;
-}
-
 .sub-menu {
   max-height: 0;
   overflow: hidden;
@@ -205,6 +194,15 @@ body.dark .birth-year-check-text.output-text-wrong {
 .dark .relative:hover .sub-menu {
   border-color: white;
 }
+.dark .sub-menu-link {
+  color: white;
+}
+.dark .sub-menu-link:hover {
+  background-color: #4d4d4d;
+}
+.dark .sub-menu {
+  background-color: #222;
+}
 
 .scientists-title {
   font-family: "Montserrat Alternates";
@@ -245,10 +243,6 @@ body.dark .birth-year-check-text.output-text-wrong {
       -ms-flex-pack: center;
           justify-content: center;
   padding-bottom: 36px;
-}
-
-.dark .scientist-card {
-  background-color: #707070;
 }
 
 .scientist-card {
@@ -309,21 +303,6 @@ body.dark .birth-year-check-text.output-text-wrong {
   transition: 0.5s;
 }
 
-.dark .scientist-btn {
-  background-color: #D9D9D9;
-  color: black;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-box-shadow: 3px 3px 0px 0px #4d4d4d;
-          box-shadow: 3px 3px 0px 0px #4d4d4d;
-}
-.dark .scientist-btn:hover {
-  background-color: black;
-  color: white;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
 .scientist-btn-list-item {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
@@ -342,8 +321,22 @@ body.dark .birth-year-check-text.output-text-wrong {
   text-align: center;
 }
 
-.dark .our-team-title {
+.dark .scientist-btn {
+  background-color: #D9D9D9;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 3px 3px 0px 0px #4d4d4d;
+          box-shadow: 3px 3px 0px 0px #4d4d4d;
+}
+.dark .scientist-btn:hover {
+  background-color: black;
   color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.dark .scientist-card {
+  background-color: #707070;
 }
 
 .our-team-title {
@@ -418,20 +411,12 @@ body.dark .birth-year-check-text.output-text-wrong {
   color: black;
 }
 
-.dark .our-team-name-text {
-  color: white;
-}
-
 .our-team-work-text {
   font-family: "Montserrat Alternates";
   font-weight: 400;
   text-align: center;
   font-size: 12px;
   color: black;
-}
-
-.dark .our-team-work-text {
-  color: white;
 }
 
 .our-team-btn-prev,
@@ -446,12 +431,6 @@ body.dark .birth-year-check-text.output-text-wrong {
   cursor: pointer;
   font-size: 18px;
   border-radius: 50%;
-  background: none;
-}
-
-.dark .our-team-btn-prev,
-.dark .our-team-btn-next {
-  color: white;
   background: none;
 }
 
@@ -510,6 +489,21 @@ body.dark .birth-year-check-text.output-text-wrong {
   background-color: rgb(184, 183, 183);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.dark .our-team-name-text {
+  color: white;
+}
+.dark .our-team-work-text {
+  color: white;
+}
+.dark .our-team-btn-prev,
+.dark .our-team-btn-next {
+  color: white;
+  background: none;
+}
+.dark .our-team-title {
+  color: white;
 }
 
 .dark .header {

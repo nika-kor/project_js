@@ -1,8 +1,6 @@
 
 
-.dark .our-team-title {
-    color: white;
-}
+
 .our-team-title {
     font-family: 'Montserrat Alternates';
     font-weight: 400;
@@ -63,9 +61,7 @@
     font-size: 14px;
     color: black;
 }
-.dark .our-team-name-text{
-    color: white;
-}
+
 .our-team-work-text{
     font-family: 'Montserrat Alternates';
     font-weight: 400;
@@ -73,9 +69,7 @@
     font-size: 12px;
     color: black;
 }
-.dark .our-team-work-text{
-    color: white;
-}
+
   
 .our-team-btn-prev,
 .our-team-btn-next {
@@ -95,11 +89,7 @@
     //     fill: currentColor;
     // }
 }
-.dark .our-team-btn-prev,
-.dark .our-team-btn-next {
-    color: white;
-    background: none;
-}
+
 
 .our-team-btn-prev svg,
 .our-team-btn-next svg {
@@ -151,5 +141,23 @@
     &:hover{
         background-color: rgb(184, 183, 183);
         transition: 0.5s;
+    }
+}
+
+.dark {
+    .our-team-name-text{
+        color: white;
+
+    }
+    .our-team-work-text{
+        color: white;
+    }
+    .our-team-btn-prev,
+    .our-team-btn-next {
+        color: white;
+        background: none;
+    }
+    .our-team-title {
+        color: white;
     }
 }
