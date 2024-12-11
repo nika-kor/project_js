@@ -8,11 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap" rel="stylesheet">
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    <!-- header -->
     <header class="header">
-        <div class="container header-container">
+        <div class="header-container">
             <a href="" class="logo">
                 <svg width="40" height="38.15" class="logo-svg">
                     <use href="./symbol-defs.svg#icon-logo"></use>
@@ -21,12 +22,20 @@
                     Coding <span class="logo-text-stylized">Magic</span>
                 </div>
             </a>
-            <nav class="header-nav">
+            <ul class="header-nav">
                 <ul class="header-nav-list">
-                    <li class="header-nav-list-item">Інтерактив<svg width="9" height="5" class="header-nav-list-svg"><use href="./symbol-defs.svg#icon-arrow-down"></use></svg></li>
+                    <li class="header-nav-list-item relative">Інтерактив<svg width="9" height="5" class="header-nav-list-svg"><use href="./symbol-defs.svg#icon-arrow-down"></use></svg>
+                        <ul class="sub-menu">
+                            <li><button class="sub-menu-link numerical-btn" onclick="toggleOn('numerical')">Числовий</button></li>
+                            <li><button class="sub-menu-link game-btn" onclick="toggleOn('game')">Ігровий</button></li>
+                            <li><button class="sub-menu-link acquaintance-btn" onclick="toggleOn('acquaintance')">Ознайомчий</button></li>
+                        </ul>
+                    </li>
                     <li class="header-nav-list-item">Наша команда</li>
                     <li class="header-nav-list-item">Контакти</li>
+
                 </ul>
+            </ul>
             </nav>
             <ul class="header-settings-list">
                 <li class="header-settings-list-item">
@@ -39,107 +48,25 @@
             </ul>
         </div>
     </header>   
-    <section class="hero">
-        <div class="container">
-            <h1 class="hero-title">Популярні інетрактивні ігри</h1>
-        </div>
-    </section>
-
-    <section class="birth-year-check numerical"></section>
-      
-    <section class="number-guessing-game">
-        <div class="container">
-            <h2 class="number-guessing-game-title">Вгадай число, яке загадав комп’ютер</h2>
-            <input type="text" class="number-guessing-game-input">
-            <button class="number-guessing-game-btn"></button>
-            <p class="number-guessing-game">Вітаю, ви вгадали число! (number) </p>
-        </div>
-    </section>
-
-    <section class="rps">
-        <div class="container">
-            <ul class="rps-list">
-                <li class="rps-list-item"><img src="" alt="" class="rps-list-img"></li>
-                <li class="rps-list-item"><img src="" alt="" class="rps-list-img"></li>
-                <li class="rps-list-item"><img src="" alt="" class="rps-list-img"></li>
-            </ul>
-            <ul class="rps-score-list">
-                <li class="rps-score-list-item">
-                    <p class="rps-score-list-p">Рахунок:</p>
-                </li>
-                <li class="rps-score-list-item">
-                    <p class="rps-score-list-p">Комп’ютер - 0</p>
-                </li>
-                <li class="rps-game-score-list-item">
-                    <p class="rps-score-list-p">Ви - 0</p>
-                </li>
-            </ul>
-            <p class="rps-text">Ви виграли раунд!</p>
-            <button class="rps-btn">Варіант комп’ютера</button>
-        </div>
-    </section>
-
-    <section class="calculator">
-        <div class="container">
-            <h2 class="calculator-title">Калькулятор</h2>
-            <input type="text" class="calculator-input" placeholder="Введіть число">
-            <ul class="math-operators-list">
-                <li class="math-operators-list-item"><button class="math-operators-list-btn">+</button></li>
-                <li class="math-operators-list-item"><button class="math-operators-list-btn">*</button></li>
-                <li class="math-operators-list-item"><button class="math-operators-list-btn">-</button></li>
-                <li class="math-operators-list-item"><button class="math-operators-list-btn">/</button></li>
-            </ul>
-            <input type="text" class="calculator-input" placeholder="Введіть число">
-            <button class="equal-btn">=</button>
-            <input type="text" class="calculator-input-result" placeholder="Результат">
-        </div>
-    </section>
-
-    <section class="time-calculator">
-        <div class="container">
-            <h2 class="time-calculator-title">Калькулятор часу</h2>
-            <input type="text"class="time-calculator-input" placeholder="Введіть число">
-            <button class="time-calculator-btn"></button>
-            <p class="time-calculator-text">3 дн. 15:45:01</p>
-        </div>
-    </section>
-
-    <section class="dino game line"></section>
-
-    <section class="football game line"></section>
-  
-    <section class="enter-numbers">
-        <div class="container">
-            <h2 class="enter-numbers-title">Введіть 3 числа</h2>
-            <input type="text" class="enter-numbers-input" placeholder="Введіть число">
-            <input type="text" class="enter-numbers-input" placeholder="Введіть число">
-            <input type="text" class="enter-numbers-input" placeholder="Введіть число">
-            <p class="enter-numbers-text">Найбільше число, яке ви ввели - (число)</p>
-        </div>
-    </section>
-
-    <section class="our-team">
-        <div class="container">
-            <h2 class="our-team-title">Наша команда</h2>
-            <div class="our-team-slider">
-                <div class="our-team-slides">
-                    <img src="" alt="" class="our-team-img">
-                    <img src="" alt="" class="our-team-img">
-                    <img src="" alt="" class="our-team-img">
-                </div>
-                <button class="our-team-btn-prev" >&#10094;</button>
-                <button class="our-team-btn-next" >&#10095;</button>
-            </div>
-                <p class="our-team-name-text">Ім’я студента</p>
-                <p class="our-team-text">Інформація про роботу, яку він/вона виконав/ла</p>
-            <div class="our-team-slider-info"></div>
-        </div>
-    </section>
-
-    <section class="сhoose-scientist"> 
-        <h1>Обери вченого/их</h1>
-    </section>
     
+
+    </section>
+    <section class="birth-year-check numerical container" id="1">
+    </section>
+
+    <section class="dino game line container" id="7">
+
+    </section>
+    <section class="football game line container" id="8">
+
+    </section>
+
+    <section class="acquaintance container section-slider line" id="9">
+    </section>
+
+    <section class="acquaintance container section-science line" id="10"> 
+    </section>
+
     <footer class="footer">
         <div class="container">
             <a href="" class="logo">
@@ -165,6 +92,12 @@
         </div>
     </footer>
 
+    <!-- nika -->
+    <script type="module" src="./js/filter.js"></script>
+    <script type="module" src="./js/slider.js"></script>
+    <script type="module" src="./js/scientists.js"></script>
+
+    <!-- misha -->
     <script src="./js/dark-mode.js" type="module"></script>
     <script src="./js/birth-year.js" type="module"></script>
     <script src="./js/dino.js" type="module"></script>

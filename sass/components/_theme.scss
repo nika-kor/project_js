@@ -1,5 +1,5 @@
 body {
-    background-color: $white;
+    background-color: rgb(245, 239, 239);
     color: $black;
 
     h2 {
@@ -8,12 +8,16 @@ body {
 
     .header-nav-list-svg {
         stroke: $black;
-    }
+    } 
     
     &.dark {
-        background-color: #222222;
+        background-color: #4d4d4d;
         color: $white;
 
+
+        .container {
+            background-color: #222;
+        }
         h2 {
             color: $white;
         }

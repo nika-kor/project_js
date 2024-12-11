@@ -1,0 +1,163 @@
+
+
+
+.our-team-title {
+    font-family: 'Montserrat Alternates';
+    font-weight: 400;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    padding-bottom: 36px;
+    padding-top: 35px;
+}
+
+
+.our-team-slides {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+    transition: 1s;
+
+}
+.our-team-slider {
+    overflow: hidden;
+    position: relative;
+    width: 800px;
+    // height: 400px;
+    margin: 0 auto;
+}
+
+.slide{
+    display: flex;
+
+    transition: 1s;
+    
+    // width: 800px;
+    // height: 400px;
+  
+}
+  
+.slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 800px;
+}
+  
+.our-team-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+.our-team-name-text{
+    font-family: 'Montserrat Alternates';
+    font-weight: 400;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+}
+
+.our-team-work-text{
+    font-family: 'Montserrat Alternates';
+    font-weight: 400;
+    text-align: center;
+    font-size: 12px;
+    color: black;
+}
+
+  
+.our-team-btn-prev,
+.our-team-btn-next {
+    position: absolute;
+    top: 50%;
+    color: black;
+      
+    transform: translateY(-50%);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    background: none;
+    
+    // & svg:hover{
+    //     fill: currentColor;
+    // }
+}
+
+
+.our-team-btn-prev svg,
+.our-team-btn-next svg {
+    width: 50px;
+    height: 100px;
+    stroke: currentColor;
+}
+
+  
+.our-team-btn-prev {
+    left: 10px;
+}
+  
+.our-team-btn-next {
+    right: 10px;
+}
+
+
+
+
+
+
+.our-team-buttons-lines{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 36px;
+    gap: 6px;
+}
+
+.line-btn{
+    width: 18px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #D9D9D9;
+    cursor: pointer;
+    transition: 0.5s;
+    &.active{
+        width: 30px;
+        background-color: #797979;
+        transition: 0.5s;
+        &:hover{
+            width: 30px;
+            background-color: #5c5b5b;
+            transition: 0.5s;
+        }
+    }
+    &:hover{
+        background-color: rgb(184, 183, 183);
+        transition: 0.5s;
+    }
+}
+
+.dark {
+    .our-team-name-text{
+        color: white;
+
+    }
+    .our-team-work-text{
+        color: white;
+    }
+    .our-team-btn-prev,
+    .our-team-btn-next {
+        color: white;
+        background: none;
+    }
+    .our-team-title {
+        color: white;
+    }
+}

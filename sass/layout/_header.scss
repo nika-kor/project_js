@@ -1,8 +1,19 @@
+
+.dark .header {
+    background-color: #222;
+}
 .header {
     padding: 21px 0;
+    background-color: white;
+    width: 100%;
+
     &-container {
-        width: 1090px;
-        @include flex(space-between, center, _, _, _);
+        max-width: 1090px;
+        width: 100%;
+        margin: 0 auto;
+        padding-right: 92px;
+        padding-left: 92px;
+        @include flex(center, center, _, _, _);
     }
 
     .logo {
@@ -47,6 +58,7 @@
 
         &-text {
             @include typography(inherit, 12px, 400, 14.63px, right);
+            width: 94px;
         }
 
         &-switch {

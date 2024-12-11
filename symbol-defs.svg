@@ -26,5 +26,13 @@
 <symbol id="icon-arrow-down" viewBox="0 0 11 7">
 <path fill="none" style="" stroke="" stroke-width="1.5px" d="M10 1L5.5 6L1 1"></path>
 </symbol>
+
+
+<symbol id="arrowLeft" viewBox="0 0 16 32">
+<path stroke="currenColor" fill="none" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.3137" d="M16 0.314l-15.686 15.686 15.686 15.686"></path>
+</symbol>
+<symbol id="arrowRight" viewBox="0 0 16 32">
+<path stroke="currenColor" fill="none"  stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.3137" d="M0.314 0.314l15.686 15.686-15.686 15.686"></path>
+</symbol>
 </defs>
 </svg>
