@@ -3,8 +3,16 @@
     margin: 0 auto;
 }
 
+body {
+    background-image: url("../../img/body-bg.png");
+    background-size: 100%;
+}
+
 section {
     position: relative;
+    width: 1090px;
+    margin: 0 auto;
+    background-color: #ffffff;
     &::before {
         content: "";
         width: 536px;

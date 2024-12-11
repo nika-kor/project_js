@@ -40,6 +40,10 @@ body {
             stroke: $white;
         }
 
+        section {
+            background-color: #222222;
+        }
+
         section::before {
             background-color: $white;
         }
