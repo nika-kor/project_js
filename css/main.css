@@ -897,4 +897,85 @@ body.dark .birth-year-check-text.output-text-wrong {
   height: 50px;
   -webkit-transition: 300ms;
   transition: 300ms;
+}
+
+.rps-container-choice {
+  text-align: center;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.rps-title {
+  font-family: Montserrat Alternates;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.5px;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  margin-bottom: 36px;
+}
+.rps-choice-btn {
+  padding: 10px;
+  margin-right: 38px;
+  margin-left: 38px;
+  border-radius: 20px;
+  background-color: #000000;
+}
+.rps-choice-btn:last-child {
+  margin: 0;
+}
+.rps-choice-btn:first-child {
+  margin: 0;
+}
+.rps-results {
+  margin-top: 20px;
+}
+.rps-message {
+  margin-top: 36px;
+}
+.rps-choices-text {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 36px;
+  font-family: Montserrat Alternates;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  background-color: #000000;
+  padding: 10px 20px;
+  border-radius: 20px;
+  width: 215px;
+  color: #FFFFFF;
+}
+.rps-results {
+  font-size: 22px;
+  font-weight: bold;
+}
+.rps-score {
+  position: absolute;
+  left: 1204px;
+  top: 390px;
+}
+.rps-score-text {
+  font-family: Montserrat Alternates;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20.4px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.rps-message {
+  font-family: Montserrat Alternates;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  text-align: center;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }/*# sourceMappingURL=main.css.map */
