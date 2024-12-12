@@ -1,4 +1,5 @@
 @import "./base/reset";
+@import "./base/variables";
 
 @import "./abstracts/mixins";
 @import "./abstracts/variables";
@@ -8,6 +9,8 @@
 @import "./components/line";
 @import "./components/theme";
 @import "./components/sub-menu";
+
+@import "./components/modal";
 
 // nika
 
@@ -21,6 +24,10 @@
 @import "./layout/birth-year";
 @import "./layout/dino";
 @import "./layout/football";
+
+// vika
+
+@import "./layout/guessing";
 
 // anton
 

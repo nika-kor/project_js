@@ -1,0 +1,60 @@
+.enter-numbers{
+    padding: 36px 0;
+
+    &-input{
+        border-radius: 20px;
+        height: 35px;
+        width: 180px;
+        padding: 10px;
+        background-color: rgba(215, 215, 215, 1);
+        color: $dgrey;
+        border: none;
+        position: relative;
+        max-width: 135px;
+        height: 35px;
+
+        &-wrapper{
+            position: relative;
+
+            &::before{
+                content: "";
+                width: 135px;
+                height: 35px;
+                position: absolute;
+                z-index: -1;
+                border-radius: 20px;
+                top: 3px;
+                left: 3px;
+                background-color: $dgrey;
+            } 
+        }
+
+
+    }
+}
+
+.enter-numbers-title{
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 0.8;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.enter-numbers-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 481px;
+    min-width: 481px;
+    margin: 0 auto 36px auto;
+
+}
+
+.enter-numbers-text{
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+}
