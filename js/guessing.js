@@ -3,7 +3,7 @@
 const sectionGussingGame = document.querySelector(".number-guessing-game");
 
 const container = document.createElement("div");
-container.classList.add("container");
+container.classList.add("container-for-guessing");
 sectionGussingGame.appendChild(container);
 
 const GuessingGameTitle = document.createElement("h2");
@@ -50,7 +50,9 @@ guessingBtn.addEventListener("click", () => {
 function checkGuessingNumber(randomnum) {
     if (guessInp.value == randomnum) {
         guessP.textContent = `Вітаю ви вгадали число: ${randomnum}`;
+        guessP.classList.remove('output-text-wrong');
     } else {
         guessP.textContent = `Ви програли, компютер загадав: ${randomnum}`;
+        guessP.classList.add('output-text-wrong');
     }
 }

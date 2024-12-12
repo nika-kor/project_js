@@ -55,5 +55,13 @@ body {
                 color: #ff5555;
             }
         }
+        .number-guessing-game-desc{
+            color: #55ff55;
+            &.output-text-wrong {
+                color: #ff5555;
+
+            }
+
+        }
     }
 }

@@ -4,11 +4,11 @@
     &-input{
         border-radius: 20px 0 0 20px;
         height: 35px;
-        width: 180px;
+        width: 115px;
         padding: 10px;
+        @include typography(inherit, 12px, 400, 14.63px, left);
         background-color: $input-grey;
-        color: rgba(215, 215, 215, 1);
-        border: none;
+        color: $dgrey;
     }
 
     &-btn{
@@ -16,13 +16,17 @@
         height: 35px;
         width: 35px;
         background-color: $black;
-        justify-content: center;
-        align-items: center;
+        @include flex(center, center, _, _, _);
+
+        &-svg {
+            fill: $white;
+        }
+
     }
 }
 
 .number-guessing-game-title{
-    font-family: Montserrat;
+    font-family: 'Montserrat Alternates';
     font-weight: 400;
     font-size: 16px;
     line-height: 0.8;
@@ -31,12 +35,8 @@
 }
 
 .guessing-wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // gap: 202px;
-    max-width: 576px;
-    margin: 0 auto;
+    @include flex(center, center, 202px, _, _);
+    // width: 576px;
 }
 
 .number-guessing-game-desc{
@@ -46,9 +46,11 @@
 }
 
 .guessing-container{
-    display: flex;
-    align-items: center;
-    position: relative;
+    @include flex(center, center, _, _, _);
+    box-shadow: 3px 3px 0px 0px #00000040;
+    border-radius: 20px;
+
+
 
     &::before{
         content: "";
@@ -63,11 +65,17 @@
     }
 }
 
-.number-guessing-game-desc{
-    color: rgba(3, 153, 0, 1);
-    font-family: Montserrat;
-    font-weight: 400;
-    font-size: 12px;
-    min-width: 224px;
-    text-align: right;
+
+.number-guessing-game-desc {
+    width: 230px;
+    @include typography(inherit, 12px, 400, 14.63px, right);
+    color: $text-right;
+
+    &.output-text-wrong {
+        color: $text-wrong;
+    }
+}
+
+.container-for-guessing {
+    @include flex(_, center, 36px, _, column);
 }
