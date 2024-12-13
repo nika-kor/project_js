@@ -1182,6 +1182,14 @@ body.dark .number-guessing-game-desc.output-text-wrong {
           text-decoration-skip-ink: none;
 }
 
+.dark .rps-choices-text {
+  background-color: #D9D9D9;
+  color: black;
+}
+.dark .rps-choice-btn {
+  background-color: #4d4d4d;
+}
+
 .input-calculator {
   border-radius: 20px;
   height: 35px;
@@ -1273,6 +1281,19 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.dark .operator-btn {
+  background-color: #D9D9D9;
+  color: black;
+  transition: 0.5s;
+  box-shadow: 3px 3px 0px 0px #4d4d4d;
+}
+.dark .equals-btn {
+  background-color: #D9D9D9;
+  color: black;
+  transition: 0.5s;
+  box-shadow: 3px 3px 0px 0px #4d4d4d;
+}
+
 .input-time {
   border-radius: 20px 0 0 20px;
   height: 35px;
@@ -1304,4 +1325,8 @@ input::-webkit-inner-spin-button {
   flex-direction: _;
   padding-bottom: 48px;
   padding-top: 49px;
+}
+
+.dark .result-time {
+  color: #ffffff;
 }/*# sourceMappingURL=main.css.map */
