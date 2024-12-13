@@ -1,0 +1,67 @@
+.input-calculator {
+    border-radius: 20px;
+    height: 35px;
+    width: 135px;
+    padding: 10px 20px;
+    @include typography(inherit, 12px, 400, 14.63px, left);
+    background-color: $input-grey;
+    color: $dgrey;
+    box-shadow: 3px 3px 0px 0px #00000040;
+
+
+}
+.equals-btn {
+    @include typography(inherit, 12px, 400, _, center);
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px 0px #00000040;
+    width: 25px;
+    height: 25px;
+}
+  
+.base-calculator{
+    @include flex(center, center, 38px, _, _);
+
+    padding-bottom: 48px;
+    padding-top: 49px;
+}
+
+.operator-wrapper {
+    width: 62px;
+    @include flex(center, center, 10px, wrap, _);
+
+}
+.operator-btn {
+    // padding: 5px 10px 5px 10px;
+    @include typography(inherit, 12px, 400, _, center);
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px 0px #00000040;
+    width: 25px;
+    height: 25px;
+}
+  
+.calculator-title {
+    @include typography(inherit, 16px, 400, 19.5px, center);
+    padding-top: 36px;
+
+}
+.result-calculator {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    color: black;
+    background-color: #D7D7D7;
+    color: #7E7E7E;
+  }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
