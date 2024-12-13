@@ -1,26 +1,26 @@
 const slidesFilling = [
     {
-        img: './image/nika.jpg', 
+        img: './img/nika.jpg', 
         name: 'Nika', 
         work: 'Team lead, слайдер нашої команди та два фільтри'
     },
     {
-        img: './image/misha.jpg', 
+        img: './img/misha.jpg', 
         name: 'Misha', 
         work: 'Гра динозаврик та футбол, секція перевірити рік'
     },
     {
-        img: './image/vika.jpg', 
+        img: './img/vika.jpg', 
         name: 'Vika', 
         work: 'модалка, секця вгадай число яке загадав комп\'ютер та введи три числа'
     },
     {
-        img: './image/anton.jpg', 
+        img: './img/anton.jpg', 
         name: 'Anton', 
         work: 'Верстка сайту, та секція камінь ножиці папір'
     },
     {
-        img: './image/alex.jpg', 
+        img: './img/alex.jpg', 
         name: 'Oleksiy', 
         work: 'Калькулятор та калькулятор часу'
     },

@@ -34,7 +34,7 @@
     position: relative;
 
     &::before{
-        content: url("../image/code-dec.png");
+        content: url("../img/code-dec.png");
         width: 30px;
         height: 30px;
         position: absolute;
@@ -43,7 +43,7 @@
     }
 
     &::after{
-        content: url("../image/puzzle-dec.png");
+        content: url("../img/puzzle-dec.png");
         width: 30px;
         height: 30px;
         position: absolute;
@@ -132,7 +132,7 @@
 
 .modal-form{
     &::before{
-        content: url("../image/cr-o-dec.png");
+        content: url("../img/cr-o-dec.png");
         width: 30px;
         height: 30px;
         position: absolute;
@@ -141,7 +141,7 @@
     }
 
     &::after{
-        content: url("../image/knife-dec.png");
+        content: url("../img/knife-dec.png");
         width: 30px;
         height: 30px;
         position: absolute;
