@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(245, 239, 239);
+    color: $black;
+
+    h2 {
+        color: $black;
+    }
+
+    .header-nav-list-svg {
+        stroke: $black;
+    } 
+    
+    &.dark {
+        background-color: #4d4d4d;
+        color: $white;
+
+
+        .container {
+            background-color: #222;
+        }
+        h2 {
+            color: $white;
+        }
+
+        button:has(svg) {
+            background-color: $white;
+
+            svg {
+                fill: $black;
+            }
+        }
+
+        .logo {
+            &-svg {
+                fill: $white;
+            }
+
+            &-text-wrapper {
+                color: $white;
+            }
+        }
+
+        .header-nav-list-svg {
+            stroke: $white;
+        }
+
+        section::before {
+            background-color: $white;
+        }
+
+        .birth-year-check-text {
+            color: #55ff55;
+
+            &.output-text-wrong {
+                color: #ff5555;
+            }
+        }
+    }
+}

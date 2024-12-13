@@ -1,3 +1,28 @@
 @import "./base/reset";
-@import "./componets/container";
-@import "./layout/rps";
+
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+@import "./components/container";
+@import "./components/scrol";
+@import "./components/line";
+@import "./components/theme";
+@import "./components/sub-menu";
+
+// nika
+
+@import "./layout/scientists";
+@import "./layout/slider";
+
+// misha
+
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/birth-year";
+@import "./layout/dino";
+@import "./layout/football";
+
+// anton
+
+@import "./layout/rock-paper-scissors";
+@import "./layout/footer";

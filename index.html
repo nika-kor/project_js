@@ -3,186 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding</title>
+    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap" rel="stylesheet">
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
-<body> 
+<body>
+    <!-- header -->
     <header class="header">
-        <div class="container">
-            <a href=""class="logo">
-                <svg width="40" height="38.15">
-                    <use href=""></use>
+        <div class="header-container">
+            <a href="" class="logo">
+                <svg width="40" height="38.15" class="logo-svg">
+                    <use href="./symbol-defs.svg#icon-logo"></use>
                 </svg>
-                Coding Magic
-            </a> 
-            <nav class="nav-list">
-                <li class="nav-list-item">Інтерактив</li>
-                <li class="nav-list-item">Наша команда</li>
-                <li class="nav-list-item">Контакти</li>
+                <div class="logo-text-wrapper">
+                    Coding <span class="logo-text-stylized">Magic</span>
+                </div>
+            </a>
+            <ul class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-list-item relative">Інтерактив<svg width="9" height="5" class="header-nav-list-svg"><use href="./symbol-defs.svg#icon-arrow-down"></use></svg>
+                        <ul class="sub-menu">
+                            <li><button class="sub-menu-link numerical-btn" onclick="toggleOn('numerical')">Числовий</button></li>
+                            <li><button class="sub-menu-link game-btn" onclick="toggleOn('game')">Ігровий</button></li>
+                            <li><button class="sub-menu-link acquaintance-btn" onclick="toggleOn('acquaintance')">Ознайомчий</button></li>
+                        </ul>
+                    </li>
+                    <li class="header-nav-list-item">Наша команда</li>
+                    <li class="header-nav-list-item">Контакти</li>
+
+                </ul>
+            </ul>
             </nav>
-            <ul class="settings-list">
-                <li class="settings-list-item">
-                    <div class="settings-list-switch">
-                        <input type="checkbox"  class="settings-list-switch-input">
-                        <label class="settings-list-switch-label">
-                          <span class="settings-list-switch-span"></span>
-                        </label>
-                    </div> 
+            <ul class="header-settings-list">
+                <li class="header-settings-list-item">
+                    <label class="header-settings-list-switch">
+                        <input type="checkbox" class="header-settings-list-switch-checkbox">
+                        <span class="header-settings-list-switch-slider"></span>
+                    </label>
                 </li>
-                <li class="settings-list-item"><p>Вітаємо, User!</p></li>
+                <li class="header-settings-list-item"><p class="header-settings-list-text">Вітаємо, User!</p></li>
             </ul>
         </div>
     </header>   
-    <section class="hero">
-        <div class="container">
+    
+    <section class="hero container">
             <h1 class="hero-title">Популярні інетрактивні ігри</h1>
-        </div>
     </section>
-    <section class="birth-year-check">
-        <div class="container">
-            <h2 class="birth-year-check-title">Перевір в який рік ти народився</h2>
-            <input type="text" class="birth-year-check-input" placeholder="Введіть рік народження">
-            <button class="birth-year-check-btn"></button>
-            <p class="birth-year-check-text">Ви народилися у високосний рік!</p>
-        </div>
-    </section>  
-    <section class="number-guessing-game">
-        <div class="container">
-            <h2 class="number-guessing-game-title">Вгадай число, яке загадав комп’ютер</h2>
-            <input type="text" class="number-guessing-game-input">
-            <button class="number-guessing-game-btn"></button>
-            <p class="number-guessing-game">Вітаю, ви вгадали число! (number) </p>
-        </div>
+
+    <section class="birth-year-check numerical container line" id="1">
     </section>
-    <section class="rps">
-        <div class="container">
-            <div class="rps-container">
-                <div class="rps-container-choice">
-                    <h1 class="rps-title">Камінь - ножиці - папір</h1>
-                    <div class="rps-content">
-                        <div class="rps-choices">
-                            <button class="rps-choice-btn" id="stone"><img src="./image/stone.png" alt="Stone"></button>
-                            <button class="rps-choice-btn" id="scissors"><img src="./image/scissors.png" alt="Scissors"></button>
-                            <button class="rps-choice-btn" id="paper"><img src="./image/paper.png" alt="Paper"></button>
-                        </div>
-                        <div class="rps-results">
-                            <p id="message" class="rps-message"></p>
-                            <p id="choices" class="rps-choices-text">Варіант комп’ютера</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="rps-score">
-                    <p class="rps-score-text">Рахунок:</p>
-                    <p id="computer-score" class="rps-score-text">Комп'ютер - 0</p>
-                    <p id="user-score" class="rps-score-text">Ви - 0</p>
-                </div>
-            </div>
-            <ul class="rps-list">
-                <li class="rps-list-item"><img src="" alt="" class="rps-list-img"></li>
-                <li class="rps-list-item"><img src="" alt="" class="rps-list-img"></li>
-                <li class="rps-list-item"><img src="" alt="" class="rps-list-img"></li>
-            </ul>
-            <ul class="rps-score-list">
-                <li class="rps-score-list-item">
-                    <p class="rps-score-list-p">Рахунок:</p>
-                </li>
-                <li class="rps-score-list-item">
-                    <p class="rps-score-list-p">Комп’ютер - 0</p>
-                </li>
-                <li class="rps-game-score-list-item">
-                    <p class="rps-score-list-p">Ви - 0</p>
-                </li>
-            </ul>
-            <p class="rps-text">Ви виграли раунд!</p>
-            <button class="rps-btn">Варіант комп’ютера</button>
-        </div>
+    <section class="rock-paper-scissors line">
     </section>
-    <section class="calculator">
-        <div class="container">
-            <h2 class="calculator-title">Калькулятор</h2>
-            <input type="text" class="calculator-input" placeholder="Введіть число">
-            <ul class="math-operators-list">
-                <li class="math-operators-list-item"><button class="math-operators-list-btn">+</button></li>
-                <li class="math-operators-list-item"><button class="math-operators-list-btn">*</button></li>
-                <li class="math-operators-list-item"><button class="math-operators-list-btn">-</button></li>
-                <li class="math-operators-list-item"><button class="math-operators-list-btn">/</button></li>
-            </ul>
-            <input type="text" class="calculator-input" placeholder="Введіть число">
-            <button class="equal-btn">=</button>
-            <input type="text" class="calculator-input-result" placeholder="Результат">
-        </div>
+    <section class="dino game line container" id="7">
+
     </section>
-    <section class="time-calculator">
-        <div class="container">
-            <h2 class="time-calculator-title">Калькулятор часу</h2>
-            <input type="text"class="time-calculator-input" placeholder="Введіть число">
-            <button class="time-calculator-btn"></button>
-            <p class="time-calculator-text">3 дн. 15:45:01</p>
-        </div>
+    <section class="football game line container" id="8">
+
     </section>
-    <section class="football">
-        <div class="container">
-            <h2 class="football-title">Футбол</h2>
-            <div class="football-field">
-                <div class="football-ball"></div>
-            </div>
-        </div>
+
+    <section class="acquaintance container section-slider line" id="9">
     </section>
-    <section class="enter-numbers">
-        <div class="container">
-            <h2 class="enter-numbers-title">Введіть 3 числа</h2>
-            <input type="text" class="enter-numbers-input" placeholder="Введіть число">
-            <input type="text" class="enter-numbers-input" placeholder="Введіть число">
-            <input type="text" class="enter-numbers-input" placeholder="Введіть число">
-            <p class="enter-numbers-text">Найбільше число, яке ви ввели - (число)</p>
-        </div>
+
+    <section class="acquaintance container section-science line" id="10"> 
     </section>
-    <section class="our-team">
-        <div class="container">
-            <h2 class="our-team-title">Наша команда</h2>
-            <div class="our-team-slider">
-                <div class="our-team-slides">
-                    <img src="" alt="" class="our-team-img">
-                    <img src="" alt="" class="our-team-img">
-                    <img src="" alt="" class="our-team-img">
-                </div>
-                <button class="our-team-btn-prev" >&#10094;</button>
-                <button class="our-team-btn-next" >&#10095;</button>
-            </div>
-            <p class="our-team-name-text">Ім’я студента</p>
-            <p class="our-team-text">Інформація про роботу, яку він/вона виконав/ла</p>
-            <div class="our-team-slider-info"></div>
-        </div>
-    </section>
-    <section class="сhoose-scientist"> 
-        <h1>Обери вченого/их</h1>
-    </section>
+
     <footer class="footer">
-        <div class="container">
-            <a href=""class="footer-logo">
-                <svg width="40" height="38.15">
-                    <use href="./symbol-defs.svg#icon-header"></use>
+        <div class="footer-container">
+            <a href="" class="logo-footer">
+                <svg width="80" height="70" class="logo-svg">
+                    <use href="./symbol-defs.svg#icon-logo"></use>
                 </svg>
-                Coding Magic
-            </a> 
+                <div class="logo-footer-text-wrapper">
+                    Coding <span class="logo-footer-text-stylized">Magic</span>
+                </div>
+            </a>
             <ul class="footer-social-list">
-                <li><a href="">Тел: +38 (123) 456 78 90</a></li>
-                <li><a href="">E-Mail: codingmagic@gmail.com</a></li>
-                <li><a href="">Facebook: CodingMagic</a></li>
-                <li><a href="">Twitter: CodingMagic</a></li>
-                <li><a href="">Instagram: CodingMagic</a></li>
+                <li class="footer-social-list-item"><a href="" class="footer-social-list-link">Тел: +38 (123) 456 78 90</a></li>
+                <li class="footer-social-list-item"><a href="" class="footer-social-list-link">E-Mail: codingmagic@gmail.com</a></li>
+                <li class="footer-social-list-item"><a href="" class="footer-social-list-link">Facebook: CodingMagic</a></li>
+                <li class="footer-social-list-item"><a href="" class="footer-social-list-link">Twitter: CodingMagic</a></li>
+                <li class="footer-social-list-item"><a href="" class="footer-social-list-link">Instagram: CodingMagic</a></li>
             </ul>
             <div class="footer-subscription">
-                <input type="text" class="footer-subscription-input" placeholder="Ваша ел. адреса...">
-                <button class="footer-subscription-btn">Підписатись</button>
+                <div class="footer-subscription-container">
+                    <input type="text" class="footer-subscription-input" placeholder="Ваша ел. адреса...">
+                    <button class="footer-subscription-btn">Підписатись</button>
+                </div>
                 <p class="footer-subscription-text">*Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті</p>
             </div>
         </div>
     </footer>
-    <script src="./js/rps.js"></script>
+
+    <!-- nika -->
+    <script type="module" src="./js/filter.js"></script>
+    <script type="module" src="./js/slider.js"></script>
+    <script type="module" src="./js/scientists.js"></script>
+
+    <!-- misha -->
+    <script src="./js/dark-mode.js" type="module"></script>
+    <script src="./js/birth-year.js" type="module"></script>
+    <script src="./js/dino.js" type="module"></script>
+    <script src="./js/football.js" type="module"></script>
+
+    <!-- anton -->
+     <script src="./js/rock-paper-scissors.js"></script>
 </body>
 </html>

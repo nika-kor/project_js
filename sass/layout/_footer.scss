@@ -1,0 +1,128 @@
+
+.dark .footer {
+    background-color: #222;
+}
+body.dark .footer {
+    background-color: #222;
+    color: white;
+  }
+  
+  body.dark .footer a {
+    color: white;
+  }
+  
+  body.dark .footer a:hover {
+    color: #ccc;
+  }
+  
+  body.dark .footer .footer-subscription-btn {
+    background-color: #444;
+    color: white;
+  }
+  
+  body.dark .footer .footer-subscription-btn:hover {
+    background-color: #555;
+  }
+  
+  body.dark .footer .footer-subscription-input {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+  }
+  
+  body.dark .footer .footer-subscription-input::placeholder {
+    color: #bbb;
+  }
+  
+  body.dark .footer .footer-subscription-text {
+    color: #ddd;
+  }
+  
+.footer{
+    padding-top: 61px;
+    padding-bottom: 59px;
+    background-color: white;
+    width: 100%;
+    &-container{
+        max-width: 1090px;
+        width: 100%;
+        margin: 0 auto;
+        @include flex(center, center, _, _, _);
+    }
+    .logo-footer {
+        margin-right: 185px;
+        @include typography(inherit,18px, 400, 24.63px, right);
+        color: $black;
+        @include flex(left, center, _, _, _);
+
+        &-svg {
+            fill: $black;
+        }
+
+        &-text-stylized {
+
+            @include typography(Sacramento, 18px, 400, 17.51px, right)
+        }
+    }
+    &-social-list {
+        font-family: Montserrat Alternates;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20.4px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;    
+        margin-right: 187px;
+        width: 465px;
+        &-link{
+            color: #000000;
+        } 
+    }
+    &-subscription{
+        &-container{
+            display: flex;
+            margin-bottom: 18px;
+        }
+        &-input{
+            width: 204px;
+            height: 35px;
+            border-radius: 20px;
+            padding-left: 10px;
+            background-color: #D7D7D7;
+            font-family: Montserrat Alternates;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14.63px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #7E7E7E;                   
+        }
+        &-btn{
+            width: 107px;
+            height: 35px;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: #000000;
+            font-family: Montserrat Alternates;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14.63px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #FFFFFF;
+            margin-left: 36px;
+        }
+        &-text{
+            font-family: Montserrat Alternates;
+            font-size: 6px;
+            font-weight: 400;
+            line-height: 7.31px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #000000;            
+        }
+    }
+}
