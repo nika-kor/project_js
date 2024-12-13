@@ -29,7 +29,7 @@ yearCheckInputWrapper.classList.add('birth-year-check-input-wrapper');
 const yearCheckInput = document.createElement('input');
 yearCheckInput.classList.add('birth-year-check-input');
 yearCheckInput.placeholder = 'Введіть рік народження';
-yearCheckInput.type = 'text';
+yearCheckInput.type = 'number';
 
 const yearCheckBtn = document.createElement('button');
 yearCheckBtn.classList.add('birth-year-check-btn');
