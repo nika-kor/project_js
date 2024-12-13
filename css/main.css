@@ -88,6 +88,9 @@ body {
 
 .line {
   position: relative;
+  width: 1090px;
+  margin: 0 auto;
+  background-color: #ffffff;
 }
 .line::before {
   content: "";
@@ -135,6 +138,9 @@ body.dark .logo-text-wrapper {
 }
 body.dark .header-nav-list-svg {
   stroke: #ffffff;
+}
+body.dark section {
+  background-color: #222222;
 }
 body.dark section::before {
   background-color: #ffffff;
