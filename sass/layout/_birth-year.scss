@@ -12,7 +12,8 @@
     }
 
     &-bottom-wrapper {
-        @include flex(center, center, 149px, _, _);
+        @include flex(center, center, 149px, _, _); 
+        
         
     }
 

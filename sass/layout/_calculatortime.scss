@@ -1,0 +1,25 @@
+.input-time {
+    border-radius: 20px 0 0 20px;
+        height: 35px;
+        width: 115px;
+        padding: 10px;
+        @include typography(inherit, 12px, 400, 14.63px, left);
+        background-color: $input-grey;
+        color: $dgrey;
+  }
+  
+  .result-time {
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: black;
+    width: 200px;
+  }
+
+.base-time {
+  @include flex(center, center, 33px, _, _);
+
+    padding-bottom: 48px;
+    padding-top: 49px;
+}
+  
