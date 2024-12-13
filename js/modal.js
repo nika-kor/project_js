@@ -27,3 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 })
 
+// після субміту відкривати іншу модалку
+
+const submitForm = document.querySelector(".modal-form");
+submitForm.addEventListener("submit", (e) => {
+e.preventDefault();
+  const oldModal = document.querySelector("[data-modal-auto]");
+  oldModal.classList.add("is-hidden");
+  const newModal = document.querySelector("[data-modal]");
+  newModal.classList.remove("is-hidden");
+  e.preventDefault();
+})
+

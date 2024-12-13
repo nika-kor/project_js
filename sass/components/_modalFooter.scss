@@ -17,7 +17,7 @@
     overflow: hidden;
   }
 
-
+ 
 
 .modal{
     position: absolute;
@@ -54,6 +54,8 @@
 
 .modal-desc{
     text-align: center;
+    @include typography(Inter, 20px, 400, _, center);
+
 
     &::before{
         content: url("../image/cr-o-dec.png");
