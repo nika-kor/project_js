@@ -211,30 +211,223 @@ body.dark .number-guessing-game-desc.output-text-wrong {
 }
 
 .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.modal-auto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 576px;
+  max-height: 316px;
+  background-color: white;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  padding: 46px 92px;
+  position: relative;
+}
+.modal-auto::before {
+  content: url("../image/code-dec.png");
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 145px;
+  right: 41px;
+}
+.modal-auto::after {
+  content: url("../image/puzzle-dec.png");
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 230px;
+  left: 85px;
+}
+
+.modal-desc-auto {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  min-width: 392px;
+  margin-bottom: 42px;
+}
+
+.modal-label, .modal-span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 18px;
+}
+
+.modal-name-span {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  min-width: 392px;
+}
+
+.input-name {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 12px;
+  background-color: rgb(215, 215, 215);
+  max-width: 169px;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.modal-btn-send {
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  max-width: 105px;
+  font-family: "Montserrat Alternates";
+  font-weight: 400;
+  font-size: 12px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.2509803922);
+          box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.2509803922);
+}
+
+.modal-btn-close {
+  background-color: inherit;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.svg-auto {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+
+.modal-form::before {
+  content: url("../image/cr-o-dec.png");
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 230px;
+  right: 85px;
+}
+.modal-form::after {
+  content: url("../image/knife-dec.png");
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 154px;
+  left: 41px;
+}
+
+.backdrop {
   position: fixed;
-  left: 0;
-  right: 0;
   top: 0;
-  bottom: 0;
-  z-index: 99;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
 }
+
 .backdrop.is-hidden {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
 }
-.backdrop .modal {
-  width: 400px;
-  background-color: #fff;
-  padding: 15px;
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 576px;
+  max-height: 316px;
+  background-color: white;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  padding: 83px 138px 138px 138px;
+  position: relative;
+}
+.modal::before {
+  content: url("../image/code-dec.png");
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 69px;
+  right: 42px;
+}
+.modal::after {
+  content: url("../image/puzzle-dec.png");
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 145px;
+  left: 85px;
+}
+
+.modal-desc {
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: _;
+  text-align: center;
+}
+.modal-desc::before {
+  content: url("../image/cr-o-dec.png");
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 145px;
+  right: 87px;
+}
+.modal-desc::after {
+  content: url("../image/knife-dec.png");
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 69px;
+  left: 43px;
 }
 
 .scientists-title {

@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap" rel="stylesheet">
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -120,11 +120,14 @@
 
                         <button class="modal-btn-close" data-modal-close>
                             <a class="modal-close-link" href="#">
-            
+                                <svg width="15" height="15" fill="black" class="svg-auto"> 
+                                    <use href="./symbol-defs.svg#icon-cross"></use>
+                                </svg>
                             </a>
                         </button>
                     </div>
                 </div>
+                
             </div>
         </div>
     </footer>
@@ -132,12 +135,15 @@
 
   
     <div class="backdrop is-hidden" data-modal-auto>
-        <div class="modal">
-            <p class="modal-desc">Привіт!Ви потрапили на сайт інтерактивних ігор та завдань Надіємось, що вам сподобається і ви отримаєте позитивні емоції! Бажаємо Вам гарно провести час!</p>
+        <div class="modal-auto">
+            <p class="modal-desc-auto">Привіт!<br>Ви потрапили на сайт інтерактивних ігор та завдань Надіємось, що вам сподобається і ви отримаєте позитивні емоції!<br> Бажаємо Вам гарно провести час!</p>
+            
 
             <button class="modal-btn-close" data-modal-close-auto>
                 <a class="modal-close-link" href="#">
-                    close
+                    <svg width="15" height="15" fill="black" class="svg-auto"> 
+                        <use href="./symbol-defs.svg#icon-cross"></use>
+                    </svg>
                 </a>
             </button>
 
@@ -146,12 +152,11 @@
                     <span class="modal-name-span">Введіть своє ім’я:</span>
                     <span class="modal-span">
                         <input class="input-name" type="text"  name="user-name" placeholder="Ваше ім'я...">
-                        <button class="modal-btn-send" type="submit">Відправити</button>
+                        <button class="modal-btn-send" type="submit">Зберегти</button>
                     </span>
 
                 </label>
             </form>
-
         </div>
     </div>
 
