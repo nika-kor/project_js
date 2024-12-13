@@ -12,6 +12,25 @@ dinoContainer.appendChild(dinoTitle);
 // тема, задана перемикачем
 let theme = document.body.classList.contains('dark') ? 'dark' : 'light';
 
+// оновлення кольорів
+const updateTheme = function () {
+    // оновити тему
+    theme = document.body.classList.contains('dark') ? 'dark' : 'light';
+    // залежно від теми задати кольори фону та тексту
+    switch(theme) {
+        case 'dark':
+            gameArea.ctx.fillStyle = 'white';
+            gameArea.canvas.style.backgroundColor = '#222222';
+            break;
+        case 'light':
+            gameArea.ctx.fillStyle = '#222222';
+            gameArea.canvas.style.backgroundColor = 'white';
+            break;
+    }
+}
+
+setInterval(updateTheme, 2);
+
 
 // функція для виконання функції з рандомними інтервалами 
 function executeWithRandomIntervals(task, minInterval, maxInterval) {
@@ -96,7 +115,7 @@ const gameArea = {
 
     // функція, що запускає гру
     start: function () {
-        // задати інтервал оновлення екрану, швидкості та рахунку (у мілісекундах)
+        // задати інтервал оновлення екрану, швидкості та рахунку (у мілісекундах)gameOver.onload = function () {updateGameArea()};
         this.intervalUpdate = setInterval(updateGameArea, 20);
         this.intervalSpeed = setInterval(updateGameSpeed, 1500);
         this.intervalScore = setInterval(updateScore, 200);
@@ -230,7 +249,7 @@ const dino = {
 
 // кнопка рестарту
 let gameOver = new Image();
-gameOver.src = './img/game-over.png'
+gameOver.src = './img/game-over.png';
 
 // функція оновлення рахунку
 function updateScore () {
@@ -246,9 +265,6 @@ function updateGameSpeed () {
 
 // функція для оновлення гри
 function updateGameArea () {
-    // оновити тему
-    theme = document.body.classList.contains('dark') ? 'dark' : 'light';
-
     // оновити стан динозаврика
     dino.update();
 
@@ -260,17 +276,6 @@ function updateGameArea () {
 
     // вивести рахунок на екран
     gameArea.ctx.font = '16px serif';
-    // залежно від теми задати кольори фону та тексту
-    switch(theme) {
-        case 'dark':
-            gameArea.ctx.fillStyle = 'white';
-            gameArea.canvas.style.backgroundColor = '#222222';
-            break;
-        case 'light':
-            gameArea.ctx.fillStyle = '#222222';
-            gameArea.canvas.style.backgroundColor = 'white';
-            break;
-    }
     gameArea.ctx.fillText(Math.floor(gameArea.score), gameArea.canvas.width - String(Math.floor(gameArea.score)).length * 8 - 8, 24);
 
     // зациклювання фону
@@ -316,7 +321,7 @@ function updateGameArea () {
 // ініціалізувати гру
 gameArea.doOnce();
 gameArea.init();
-setTimeout(() => {gameArea.ctx.drawImage(gameOver, (gameArea.canvas.width / 2) - 25, (gameArea.canvas.height / 2) - 25, 50, 50);}, 10);
+setTimeout(() => {updateGameArea(); gameArea.ctx.drawImage(gameOver, (gameArea.canvas.width / 2) - 25, (gameArea.canvas.height / 2) - 25, 50, 50);}, 100);
 
 // запустити гру при натиску на ігрове поле, якщо вона вже не запущена
 gameArea.canvas.addEventListener('click', () => {
