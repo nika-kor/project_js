@@ -74,10 +74,24 @@
 
                 &:checked + span {
                     background-color: #cccccc;
+
                 }
 
                 &:checked + span::before {
                     transform: translateX(20px);
+
+                        position: absolute;
+                        content: "";
+                        height: 20px;
+                        width: 20px;
+                        left: 0;
+                        top: 0px;
+                        background-color: white;
+                        transition: 400ms;
+                        border-radius: 50%;
+                        background-image: url("../img/moonBtn.png");
+                        background-position: 0;
+                    
                 }
             }
 
@@ -104,7 +118,7 @@
                     border-radius: 50%;
                     background-image: url("../img/header-slider.png");
                     background-position: 0;
-                }
+                } 
             }
         }
     }

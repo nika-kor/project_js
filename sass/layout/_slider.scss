@@ -156,6 +156,11 @@
     .our-team-btn-next {
         color: white;
         background: none;
+        transition: all 0.5s;
+
+        &:hover {
+            color: rgb(102, 102, 102);
+        }
     }
     .our-team-title {
         color: white;

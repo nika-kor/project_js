@@ -12,6 +12,7 @@ body.dark .footer {
   }
   
   body.dark .footer a:hover {
+    transition: 0.5s;
     color: #ccc;
   }
   
@@ -21,6 +22,8 @@ body.dark .footer {
   }
   
   body.dark .footer .footer-subscription-btn:hover {
+    transition: 0.5s;
+
     background-color: #555;
   }
   
@@ -39,6 +42,7 @@ body.dark .footer {
   }
   
 .footer{
+  height: 230px;
     padding-top: 61px;
     padding-bottom: 59px;
     background-color: white;
@@ -65,7 +69,7 @@ body.dark .footer {
         }
     }
     &-social-list {
-        font-family: Montserrat Alternates;
+        font-family: 'Montserrat Alternates';
         font-size: 12px;
         font-weight: 400;
         line-height: 20.4px;
@@ -76,6 +80,12 @@ body.dark .footer {
         width: 465px;
         &-link{
             color: #000000;
+            transition: all 0.5s;
+
+
+            &:hover {
+                color: rgb(52, 52, 52);
+            }
         } 
     }
     &-subscription{
@@ -89,7 +99,7 @@ body.dark .footer {
             border-radius: 20px;
             padding-left: 10px;
             background-color: #D7D7D7;
-            font-family: Montserrat Alternates;
+            font-family: 'Montserrat Alternates';
             font-size: 12px;
             font-weight: 400;
             line-height: 14.63px;
@@ -104,7 +114,7 @@ body.dark .footer {
             padding: 10px;
             border-radius: 20px;
             background-color: #000000;
-            font-family: Montserrat Alternates;
+            font-family: 'Montserrat Alternates';
             font-size: 12px;
             font-weight: 400;
             line-height: 14.63px;
@@ -113,9 +123,16 @@ body.dark .footer {
             text-decoration-skip-ink: none;
             color: #FFFFFF;
             margin-left: 36px;
+            transition: all 0.5s;
+
+
+            &:hover {
+                background-color: #D9D9D9;
+                color: black;
+            }
         }
         &-text{
-            font-family: Montserrat Alternates;
+            font-family: 'Montserrat Alternates';
             font-size: 6px;
             font-weight: 400;
             line-height: 7.31px;
