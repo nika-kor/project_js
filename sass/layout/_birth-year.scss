@@ -12,9 +12,7 @@
     }
 
     &-bottom-wrapper {
-        @include flex(center, center, 149px, _, _); 
-        
-        
+        @include flex(center, center, 202px, _, _);
     }
 
     &-input-wrapper {
@@ -39,9 +37,14 @@
         width: 35px;
         background-color: $black;
         @include flex(center, center, _, _, _);
+        transition: all 0.5s;
+
 
         &-svg {
             fill: $white;
+        }
+        &:hover {
+            background-color: rgb(70, 70, 70);
         }
     }
 
@@ -52,6 +55,18 @@
 
         &.output-text-wrong {
             color: $text-wrong;
+        }
+    }
+}
+
+.dark {
+    .birth-year-check-input-wrapper {
+        box-shadow: 3px 3px 0px 0px #4d4d4d ;
+        
+    }
+    .birth-year-check-btn {
+        &:hover {
+            background-color: #747474;
         }
     }
 }

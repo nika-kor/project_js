@@ -17,9 +17,15 @@
         width: 35px;
         background-color: $black;
         @include flex(center, center, _, _, _);
+        transition: all 0.5s;
+
+        
 
         &-svg {
             fill: $white;
+        }
+        &:hover {
+            background-color: rgb(70, 70, 70);
         }
 
     }
@@ -78,4 +84,15 @@
 
 .container-for-guessing {
     @include flex(_, center, 36px, _, column);
+}
+.dark {
+    .guessing-container {
+        box-shadow: 3px 3px 0px 0px #4d4d4d ;
+        
+    }
+    .number-guessing-game-btn {
+        &:hover {
+            background-color: #747474;
+        }
+    }
 }

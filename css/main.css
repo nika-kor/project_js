@@ -172,7 +172,6 @@ body.dark .number-guessing-game-desc.output-text-wrong {
   border-bottom-right-radius: 20px;
   border: 1px solid transparent;
   border-top: none;
-  z-index: 1;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -244,7 +243,7 @@ body.dark .number-guessing-game-desc.output-text-wrong {
   border-radius: 20px;
   -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  z-index: 999;
   padding: 46px 92px;
   position: relative;
 }
@@ -524,18 +523,19 @@ body.dark .number-guessing-game-desc.output-text-wrong {
   line-height: 14.63px;
   -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.2509803922);
           box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.2509803922);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .scientist-btn:hover {
   background-color: #D9D9D9;
   color: black;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .scientist-btn-list-item {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  padding: 18px;
+  padding: 0 18px;
+  margin-bottom: 20px;
 }
 .scientist-btn-list-item:nth-child(odd) {
   text-align: right;
@@ -548,6 +548,7 @@ body.dark .number-guessing-game-desc.output-text-wrong {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .dark .scientist-btn {
@@ -557,12 +558,12 @@ body.dark .number-guessing-game-desc.output-text-wrong {
   transition: 0.5s;
   -webkit-box-shadow: 3px 3px 0px 0px #4d4d4d;
           box-shadow: 3px 3px 0px 0px #4d4d4d;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .dark .scientist-btn:hover {
   background-color: black;
   color: white;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 .dark .scientist-card {
   background-color: #707070;
@@ -730,6 +731,12 @@ body.dark .number-guessing-game-desc.output-text-wrong {
 .dark .our-team-btn-next {
   color: white;
   background: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.dark .our-team-btn-prev:hover,
+.dark .our-team-btn-next:hover {
+  color: rgb(102, 102, 102);
 }
 .dark .our-team-title {
   color: white;
@@ -897,6 +904,18 @@ body.dark .number-guessing-game-desc.output-text-wrong {
 .header-settings-list-switch-checkbox:checked + span::before {
   -webkit-transform: translateX(20px);
           transform: translateX(20px);
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 0;
+  top: 0px;
+  background-color: white;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  border-radius: 50%;
+  background-image: url("../img/moonBtn.png");
+  background-position: 0;
 }
 .header-settings-list-switch-slider {
   position: absolute;
@@ -976,7 +995,7 @@ body.dark .number-guessing-game-desc.output-text-wrong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 149px;
+  gap: 202px;
   -ms-flex-wrap: _;
       flex-wrap: _;
   -webkit-box-orient: vertical;
@@ -1039,9 +1058,14 @@ body.dark .number-guessing-game-desc.output-text-wrong {
   -webkit-box-direction: normal;
       -ms-flex-direction: _;
           flex-direction: _;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .birth-year-check-btn-svg {
   fill: #ffffff;
+}
+.birth-year-check-btn:hover {
+  background-color: rgb(70, 70, 70);
 }
 .birth-year-check-text {
   width: 230px;
@@ -1054,6 +1078,14 @@ body.dark .number-guessing-game-desc.output-text-wrong {
 }
 .birth-year-check-text.output-text-wrong {
   color: #990000;
+}
+
+.dark .birth-year-check-input-wrapper {
+  -webkit-box-shadow: 3px 3px 0px 0px #4d4d4d;
+          box-shadow: 3px 3px 0px 0px #4d4d4d;
+}
+.dark .birth-year-check-btn:hover {
+  background-color: #747474;
 }
 
 .dino {
@@ -1128,6 +1160,10 @@ body.dark .number-guessing-game-desc.output-text-wrong {
   transition: 300ms;
 }
 
+.dark .football-field {
+  background-color: #387837;
+}
+
 .number-guessing-game {
   padding: 36px 0;
 }
@@ -1165,9 +1201,14 @@ body.dark .number-guessing-game-desc.output-text-wrong {
   -webkit-box-direction: normal;
       -ms-flex-direction: _;
           flex-direction: _;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .number-guessing-game-btn-svg {
   fill: #ffffff;
+}
+.number-guessing-game-btn:hover {
+  background-color: rgb(70, 70, 70);
 }
 
 .number-guessing-game-title {
@@ -1269,6 +1310,14 @@ body.dark .number-guessing-game-desc.output-text-wrong {
           flex-direction: column;
 }
 
+.dark .guessing-container {
+  -webkit-box-shadow: 3px 3px 0px 0px #4d4d4d;
+          box-shadow: 3px 3px 0px 0px #4d4d4d;
+}
+.dark .number-guessing-game-btn:hover {
+  background-color: #747474;
+}
+
 .enter-numbers {
   padding: 36px 0;
 }
@@ -1358,12 +1407,17 @@ body.dark .number-guessing-game-desc.output-text-wrong {
   margin-left: 38px;
   border-radius: 20px;
   background-color: #000000;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .rps-choice-btn:last-child {
   margin: 0;
 }
 .rps-choice-btn:first-child {
   margin: 0;
+}
+.rps-choice-btn:hover {
+  background-color: rgb(61, 61, 61);
 }
 .rps-results {
   margin-top: 20px;
@@ -1424,6 +1478,11 @@ body.dark .number-guessing-game-desc.output-text-wrong {
 }
 .dark .rps-choice-btn {
   background-color: #4d4d4d;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.dark .rps-choice-btn:hover {
+  background-color: #5f5f5f;
 }
 
 .dark .footer {
@@ -1440,6 +1499,8 @@ body.dark .footer a {
 }
 
 body.dark .footer a:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   color: #ccc;
 }
 
@@ -1449,6 +1510,8 @@ body.dark .footer .footer-subscription-btn {
 }
 
 body.dark .footer .footer-subscription-btn:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   background-color: #555;
 }
 
@@ -1483,6 +1546,7 @@ body.dark .footer .footer-subscription-text {
 }
 
 .footer {
+  height: 230px;
   padding-top: 61px;
   padding-bottom: 59px;
   background-color: white;
@@ -1545,7 +1609,7 @@ body.dark .footer .footer-subscription-text {
   text-align: right;
 }
 .footer-social-list {
-  font-family: Montserrat Alternates;
+  font-family: "Montserrat Alternates";
   font-size: 12px;
   font-weight: 400;
   line-height: 20.4px;
@@ -1558,6 +1622,11 @@ body.dark .footer .footer-subscription-text {
 }
 .footer-social-list-link {
   color: #000000;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.footer-social-list-link:hover {
+  color: rgb(52, 52, 52);
 }
 .footer-subscription-container {
   display: -webkit-box;
@@ -1571,7 +1640,7 @@ body.dark .footer .footer-subscription-text {
   border-radius: 20px;
   padding-left: 10px;
   background-color: #D7D7D7;
-  font-family: Montserrat Alternates;
+  font-family: "Montserrat Alternates";
   font-size: 12px;
   font-weight: 400;
   line-height: 14.63px;
@@ -1587,7 +1656,7 @@ body.dark .footer .footer-subscription-text {
   padding: 10px;
   border-radius: 20px;
   background-color: #000000;
-  font-family: Montserrat Alternates;
+  font-family: "Montserrat Alternates";
   font-size: 12px;
   font-weight: 400;
   line-height: 14.63px;
@@ -1597,9 +1666,15 @@ body.dark .footer .footer-subscription-text {
           text-decoration-skip-ink: none;
   color: #FFFFFF;
   margin-left: 36px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.footer-subscription-btn:hover {
+  background-color: #D9D9D9;
+  color: black;
 }
 .footer-subscription-text {
-  font-family: Montserrat Alternates;
+  font-family: "Montserrat Alternates";
   font-size: 6px;
   font-weight: 400;
   line-height: 7.31px;
@@ -1640,6 +1715,11 @@ body.dark .footer .footer-subscription-text {
           box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.2509803922);
   width: 25px;
   height: 25px;
+}
+.equals-btn:hover {
+  background-color: rgb(70, 70, 70);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .base-calculator {
@@ -1698,6 +1778,11 @@ body.dark .footer .footer-subscription-text {
   width: 25px;
   height: 25px;
 }
+.operator-btn:hover {
+  background-color: rgb(70, 70, 70);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
 
 .calculator-title {
   font-family: inherit;
@@ -1732,6 +1817,11 @@ input::-webkit-inner-spin-button {
   -webkit-box-shadow: 3px 3px 0px 0px #4d4d4d;
           box-shadow: 3px 3px 0px 0px #4d4d4d;
 }
+.dark .operator-btn:hover {
+  background-color: rgb(128, 128, 128);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
 .dark .equals-btn {
   background-color: #D9D9D9;
   color: black;
@@ -1739,6 +1829,11 @@ input::-webkit-inner-spin-button {
   transition: 0.5s;
   -webkit-box-shadow: 3px 3px 0px 0px #4d4d4d;
           box-shadow: 3px 3px 0px 0px #4d4d4d;
+}
+.dark .equals-btn:hover {
+  background-color: rgb(128, 128, 128);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .input-time {

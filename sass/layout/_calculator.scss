@@ -19,6 +19,10 @@
     box-shadow: 3px 3px 0px 0px #00000040;
     width: 25px;
     height: 25px;
+    &:hover {
+        background-color: rgb(70, 70, 70);
+        transition: 0.5s
+    }
 }
   
 .base-calculator{
@@ -43,6 +47,10 @@
     box-shadow: 3px 3px 0px 0px #00000040;
     width: 25px;
     height: 25px;
+    &:hover {
+        background-color: rgb(70, 70, 70);
+        transition: 0.5s
+    }
 }
   
 .calculator-title {
@@ -71,12 +79,20 @@ input::-webkit-inner-spin-button {
         background-color: #D9D9D9;
         color: black;
         transition: 0.5s;
-        box-shadow: 3px 3px 0px 0px #4d4d4d ;
+        box-shadow: 3px 3px 0px 0px #4d4d4d ;    
+        &:hover {
+            background-color: rgb(128, 128, 128);
+            transition: 0.5s
+        }
     }
     .equals-btn {
         background-color: #D9D9D9;
         color: black;
         transition: 0.5s;
         box-shadow: 3px 3px 0px 0px #4d4d4d ;
+        &:hover {
+            background-color: rgb(128, 128, 128);
+            transition: 0.5s
+        }
     }
 }

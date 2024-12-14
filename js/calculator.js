@@ -36,7 +36,7 @@ operatorDiv.id = "operator_button";
 
 ["+", "*", "-", "/"].forEach((symbol, index) => {
   const button = document.createElement("button");
-  button.id = ["plus", "minus", "multiplace", "divide"][index];
+  button.id = ["plus", "multiplace", "minus", "divide"][index];
   button.classList.add("operator-btn");
   button.textContent = symbol;
   operatorDiv.appendChild(button);
