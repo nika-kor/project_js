@@ -17,7 +17,29 @@
             <a href="" class="logo">
                 <svg width="40" height="38.15" class="logo-svg">
                     <use href="./symbol-defs.svg#icon-logo"></use>
+        <div class="header-container">
+            <a href="" class="logo">
+                <svg width="40" height="38.15" class="logo-svg">
+                    <use href="./symbol-defs.svg#icon-logo"></use>
                 </svg>
+                <div class="logo-text-wrapper">
+                    Coding <span class="logo-text-stylized">Magic</span>
+                </div>
+            </a>
+            <ul class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-list-item relative">Інтерактив<svg width="9" height="5" class="header-nav-list-svg"><use href="./symbol-defs.svg#icon-arrow-down"></use></svg>
+                        <ul class="sub-menu">
+                            <li><button class="sub-menu-link numerical-btn" onclick="toggleOn('numerical')">Числовий</button></li>
+                            <li><button class="sub-menu-link game-btn" onclick="toggleOn('game')">Ігровий</button></li>
+                            <li><button class="sub-menu-link acquaintance-btn" onclick="toggleOn('acquaintance')">Ознайомчий</button></li>
+                        </ul>
+                    </li>
+                    <li class="header-nav-list-item">Наша команда</li>
+                    <li class="header-nav-list-item">Контакти</li>
+
+                </ul>
+            </ul>
                 <div class="logo-text-wrapper">
                     Coding <span class="logo-text-stylized">Magic</span>
                 </div>
@@ -43,11 +65,20 @@
                         <input type="checkbox" class="header-settings-list-switch-checkbox">
                         <span class="header-settings-list-switch-slider"></span>
                     </label>
+            <ul class="header-settings-list">
+                <li class="header-settings-list-item">
+                    <label class="header-settings-list-switch">
+                        <input type="checkbox" class="header-settings-list-switch-checkbox">
+                        <span class="header-settings-list-switch-slider"></span>
+                    </label>
                 </li>
+                <li class="header-settings-list-item"><p class="header-settings-list-text">Вітаємо, User!</p></li>
                 <li class="header-settings-list-item"><p class="header-settings-list-text">Вітаємо, User!</p></li>
             </ul>
         </div>
     </header>   
+    
+    <section class="hero container">
     
     <section class="hero container">
             <h1 class="hero-title">Популярні інетрактивні ігри</h1>
@@ -86,25 +117,27 @@
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <a href="" class="logo">
-                <svg width="40" height="38.15" class="logo-svg">
+        <div class="footer-container">
+            <a href="" class="logo-footer">
+                <svg width="80" height="70" class="logo-svg">
                     <use href="./symbol-defs.svg#icon-logo"></use>
                 </svg>
-                <div class="logo-text-wrapper">
-                    Coding <span class="logo-text-stylized">Magic</span>
+                <div class="logo-footer-text-wrapper">
+                    Coding <span class="logo-footer-text-stylized">Magic</span>
                 </div>
             </a>
             <ul class="footer-social-list">
-                <li><a href="">Тел: +38 (123) 456 78 90</a></li>
-                <li><a href="">E-Mail: codingmagic@gmail.com</a></li>
-                <li><a href="">Facebook: CodingMagic</a></li>
-                <li><a href="">Twitter: CodingMagic</a></li>
-                <li><a href="">Instagram: CodingMagic</a></li>
+                <li class="footer-social-list-item"><a href="" class="footer-social-list-link">Тел: +38 (123) 456 78 90</a></li>
+                <li class="footer-social-list-item"><a href="" class="footer-social-list-link">E-Mail: codingmagic@gmail.com</a></li>
+                <li class="footer-social-list-item"><a href="" class="footer-social-list-link">Facebook: CodingMagic</a></li>
+                <li class="footer-social-list-item"><a href="" class="footer-social-list-link">Twitter: CodingMagic</a></li>
+                <li class="footer-social-list-item"><a href="" class="footer-social-list-link">Instagram: CodingMagic</a></li>
             </ul>
             <div class="footer-subscription">
-                <input type="text" class="footer-subscription-input" placeholder="Ваша ел. адреса...">
-                <button class="footer-subscription-btn" data-modal-open>Підписатись</button>
+                <div class="footer-subscription-container">
+                    <input type="text" class="footer-subscription-input" placeholder="Ваша ел. адреса...">
+                    <button class="footer-subscription-btn">Підписатись</button>
+                </div>
                 <p class="footer-subscription-text">*Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті</p>
 
                 <div class="backdrop is-hidden" data-modal>

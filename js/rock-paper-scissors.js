@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
           <h1 class="rps-title">Камінь - ножиці - папір</h1>
           <div class="rps-content">
             <div class="rps-choices">
-              <button class="rps-choice-btn" id="stone"><img src="./img/stone.png" alt="Stone"></button>
-              <button class="rps-choice-btn" id="scissors"><img src="./img/scissors.png" alt="Scissors"></button>
-              <button class="rps-choice-btn" id="paper"><img src="./img/paper.png" alt="Paper"></button>
+              <button class="rps-choice-btn" id="stone"><img src="./image/stone.png" alt="Stone"></button>
+              <button class="rps-choice-btn" id="scissors"><img src="./image/scissors.png" alt="Scissors"></button>
+              <button class="rps-choice-btn" id="paper"><img src="./image/paper.png" alt="Paper"></button>
             </div>
             <div class="rps-results">
               <p id="message" class="rps-message"></p>

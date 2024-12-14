@@ -1,26 +1,26 @@
 const slidesFilling = [
     {
-        img: './img/nika.jpg', 
+        img: './image/nika.jpg', 
         name: 'Nika', 
         work: 'Team lead, слайдер нашої команди та два фільтри'
     },
     {
-        img: './img/misha.jpg', 
+        img: './image/misha.jpg', 
         name: 'Misha', 
         work: 'Гра динозаврик та футбол, секція перевірити рік'
     },
     {
-        img: './img/vika.jpg', 
+        img: './image/vika.jpg', 
         name: 'Vika', 
         work: 'модалка, секця вгадай число яке загадав комп\'ютер та введи три числа'
     },
     {
-        img: './img/anton.jpg', 
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvDKV7L91pePEUNFbnS1mOzlWvsAQGY_S9RhB3vvd49G7TNBPCJpeytWgdt69s7IxSzFk&usqp=CAU', 
         name: 'Anton', 
         work: 'Верстка сайту, та секція камінь ножиці папір'
     },
     {
-        img: './img/alex.jpg', 
+        img: 'https://pngimg.com/uploads/square/square_PNG67.png', 
         name: 'Oleksiy', 
         work: 'Калькулятор та калькулятор часу'
     },
